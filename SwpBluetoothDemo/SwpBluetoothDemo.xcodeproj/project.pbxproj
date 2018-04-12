@@ -1,0 +1,505 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2D8F75B0207E1E920001DA8E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D8F75AF207E1E920001DA8E /* AppDelegate.m */; };
+		2D8F75B8207E1E930001DA8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D8F75B7207E1E930001DA8E /* Assets.xcassets */; };
+		2D8F75BB207E1E930001DA8E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D8F75B9207E1E930001DA8E /* LaunchScreen.storyboard */; };
+		2D8F75BE207E1E930001DA8E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D8F75BD207E1E930001DA8E /* main.m */; };
+		2DC3E3CC207EFF7800207ED3 /* SwpBluetoothListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DC3E3CB207EFF7800207ED3 /* SwpBluetoothListViewController.m */; };
+		2DC3E3CF207F04B100207ED3 /* SwpBluetoothMethodTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DC3E3CE207F04B100207ED3 /* SwpBluetoothMethodTestViewController.m */; };
+		2DC3E3D2207F06A300207ED3 /* SwpBluetoothListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DC3E3D1207F06A300207ED3 /* SwpBluetoothListView.m */; };
+		2DC3E3D5207F06BD00207ED3 /* SwpBluetoothListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DC3E3D4207F06BD00207ED3 /* SwpBluetoothListCell.m */; };
+		2DC3E3D8207F0AEE00207ED3 /* SwpBluetoothListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DC3E3D7207F0AEE00207ED3 /* SwpBluetoothListModel.m */; };
+		2DC3E3DE207F311000207ED3 /* SwpBluetoothTempViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DC3E3DD207F311000207ED3 /* SwpBluetoothTempViewController.m */; };
+		2DE2DF9A207E4BB50066011A /* SwpBluetoothNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DE2DF92207E4BB50066011A /* SwpBluetoothNavigationController.m */; };
+		2DE2DF9B207E4BB50066011A /* SwpBluetoothRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DE2DF93207E4BB50066011A /* SwpBluetoothRootViewController.m */; };
+		2DE2DF9C207E4BB50066011A /* SwpBluetoothBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DE2DF95207E4BB50066011A /* SwpBluetoothBaseViewController.m */; };
+		78B6ED982354219C0C9A96B3 /* libPods-SwpBluetoothDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D6022527CE271E9734EFCEA4 /* libPods-SwpBluetoothDemo.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2D8F75AB207E1E920001DA8E /* SwpBluetoothDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwpBluetoothDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D8F75AE207E1E920001DA8E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2D8F75AF207E1E920001DA8E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2D8F75B7207E1E930001DA8E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2D8F75BA207E1E930001DA8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2D8F75BC207E1E930001DA8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2D8F75BD207E1E930001DA8E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2DC3E3CA207EFF7800207ED3 /* SwpBluetoothListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwpBluetoothListViewController.h; sourceTree = "<group>"; };
+		2DC3E3CB207EFF7800207ED3 /* SwpBluetoothListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SwpBluetoothListViewController.m; sourceTree = "<group>"; };
+		2DC3E3CD207F04B100207ED3 /* SwpBluetoothMethodTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwpBluetoothMethodTestViewController.h; sourceTree = "<group>"; };
+		2DC3E3CE207F04B100207ED3 /* SwpBluetoothMethodTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SwpBluetoothMethodTestViewController.m; sourceTree = "<group>"; };
+		2DC3E3D0207F06A300207ED3 /* SwpBluetoothListView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwpBluetoothListView.h; sourceTree = "<group>"; };
+		2DC3E3D1207F06A300207ED3 /* SwpBluetoothListView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SwpBluetoothListView.m; sourceTree = "<group>"; };
+		2DC3E3D3207F06BD00207ED3 /* SwpBluetoothListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwpBluetoothListCell.h; sourceTree = "<group>"; };
+		2DC3E3D4207F06BD00207ED3 /* SwpBluetoothListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SwpBluetoothListCell.m; sourceTree = "<group>"; };
+		2DC3E3D6207F0AEE00207ED3 /* SwpBluetoothListModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwpBluetoothListModel.h; sourceTree = "<group>"; };
+		2DC3E3D7207F0AEE00207ED3 /* SwpBluetoothListModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SwpBluetoothListModel.m; sourceTree = "<group>"; };
+		2DC3E3DC207F311000207ED3 /* SwpBluetoothTempViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwpBluetoothTempViewController.h; sourceTree = "<group>"; };
+		2DC3E3DD207F311000207ED3 /* SwpBluetoothTempViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SwpBluetoothTempViewController.m; sourceTree = "<group>"; };
+		2DE2DF90207E4BB50066011A /* SwpBluetoothRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwpBluetoothRootViewController.h; sourceTree = "<group>"; };
+		2DE2DF91207E4BB50066011A /* SwpBluetoothBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwpBluetoothBaseViewController.h; sourceTree = "<group>"; };
+		2DE2DF92207E4BB50066011A /* SwpBluetoothNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwpBluetoothNavigationController.m; sourceTree = "<group>"; };
+		2DE2DF93207E4BB50066011A /* SwpBluetoothRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwpBluetoothRootViewController.m; sourceTree = "<group>"; };
+		2DE2DF94207E4BB50066011A /* SwpBluetoothNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwpBluetoothNavigationController.h; sourceTree = "<group>"; };
+		2DE2DF95207E4BB50066011A /* SwpBluetoothBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwpBluetoothBaseViewController.m; sourceTree = "<group>"; };
+		74CB093D41F93C767E3A8CBE /* Pods-SwpBluetoothDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwpBluetoothDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwpBluetoothDemo/Pods-SwpBluetoothDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		A1B46FF246B7DCCFBF924DA3 /* Pods-SwpBluetoothDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwpBluetoothDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwpBluetoothDemo/Pods-SwpBluetoothDemo.release.xcconfig"; sourceTree = "<group>"; };
+		D6022527CE271E9734EFCEA4 /* libPods-SwpBluetoothDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SwpBluetoothDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2D8F75A8207E1E920001DA8E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78B6ED982354219C0C9A96B3 /* libPods-SwpBluetoothDemo.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2D8F75A2207E1E920001DA8E = {
+			isa = PBXGroup;
+			children = (
+				2D8F75AD207E1E920001DA8E /* SwpBluetoothDemo */,
+				2D8F75AC207E1E920001DA8E /* Products */,
+				A5C2A9B71C7C5F875FF163A6 /* Pods */,
+				CDD8D258C2071E588F42154C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		2D8F75AC207E1E920001DA8E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2D8F75AB207E1E920001DA8E /* SwpBluetoothDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2D8F75AD207E1E920001DA8E /* SwpBluetoothDemo */ = {
+			isa = PBXGroup;
+			children = (
+				2DE2DF79207E48FB0066011A /* Class */,
+				2D8F75AE207E1E920001DA8E /* AppDelegate.h */,
+				2D8F75AF207E1E920001DA8E /* AppDelegate.m */,
+				2D8F75B7207E1E930001DA8E /* Assets.xcassets */,
+				2D8F75B9207E1E930001DA8E /* LaunchScreen.storyboard */,
+				2D8F75BC207E1E930001DA8E /* Info.plist */,
+				2D8F75BD207E1E930001DA8E /* main.m */,
+			);
+			path = SwpBluetoothDemo;
+			sourceTree = "<group>";
+		};
+		2DE2DF79207E48FB0066011A /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				2DE2DF8E207E4BB50066011A /* Main */,
+				2DE2DF96207E4BB50066011A /* SwpBluetooth */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		2DE2DF8E207E4BB50066011A /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				2DE2DF8F207E4BB50066011A /* Controller */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		2DE2DF8F207E4BB50066011A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2DE2DF90207E4BB50066011A /* SwpBluetoothRootViewController.h */,
+				2DE2DF93207E4BB50066011A /* SwpBluetoothRootViewController.m */,
+				2DE2DF94207E4BB50066011A /* SwpBluetoothNavigationController.h */,
+				2DE2DF92207E4BB50066011A /* SwpBluetoothNavigationController.m */,
+				2DE2DF91207E4BB50066011A /* SwpBluetoothBaseViewController.h */,
+				2DE2DF95207E4BB50066011A /* SwpBluetoothBaseViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2DE2DF96207E4BB50066011A /* SwpBluetooth */ = {
+			isa = PBXGroup;
+			children = (
+				2DE2DF97207E4BB50066011A /* Models */,
+				2DE2DF98207E4BB50066011A /* Controller */,
+				2DE2DF99207E4BB50066011A /* Views */,
+			);
+			path = SwpBluetooth;
+			sourceTree = "<group>";
+		};
+		2DE2DF97207E4BB50066011A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2DC3E3D6207F0AEE00207ED3 /* SwpBluetoothListModel.h */,
+				2DC3E3D7207F0AEE00207ED3 /* SwpBluetoothListModel.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2DE2DF98207E4BB50066011A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2DC3E3CA207EFF7800207ED3 /* SwpBluetoothListViewController.h */,
+				2DC3E3CB207EFF7800207ED3 /* SwpBluetoothListViewController.m */,
+				2DC3E3CD207F04B100207ED3 /* SwpBluetoothMethodTestViewController.h */,
+				2DC3E3CE207F04B100207ED3 /* SwpBluetoothMethodTestViewController.m */,
+				2DC3E3DC207F311000207ED3 /* SwpBluetoothTempViewController.h */,
+				2DC3E3DD207F311000207ED3 /* SwpBluetoothTempViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2DE2DF99207E4BB50066011A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2DC3E3D0207F06A300207ED3 /* SwpBluetoothListView.h */,
+				2DC3E3D1207F06A300207ED3 /* SwpBluetoothListView.m */,
+				2DC3E3D3207F06BD00207ED3 /* SwpBluetoothListCell.h */,
+				2DC3E3D4207F06BD00207ED3 /* SwpBluetoothListCell.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A5C2A9B71C7C5F875FF163A6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				74CB093D41F93C767E3A8CBE /* Pods-SwpBluetoothDemo.debug.xcconfig */,
+				A1B46FF246B7DCCFBF924DA3 /* Pods-SwpBluetoothDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CDD8D258C2071E588F42154C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D6022527CE271E9734EFCEA4 /* libPods-SwpBluetoothDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2D8F75AA207E1E920001DA8E /* SwpBluetoothDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2D8F75C1207E1E930001DA8E /* Build configuration list for PBXNativeTarget "SwpBluetoothDemo" */;
+			buildPhases = (
+				9E9D69A65AD5C58246DDFDDA /* [CP] Check Pods Manifest.lock */,
+				2D8F75A7207E1E920001DA8E /* Sources */,
+				2D8F75A8207E1E920001DA8E /* Frameworks */,
+				2D8F75A9207E1E920001DA8E /* Resources */,
+				7F4CFB6B337C8183F549DFA6 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwpBluetoothDemo;
+			productName = SwpBluetoothDemo;
+			productReference = 2D8F75AB207E1E920001DA8E /* SwpBluetoothDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2D8F75A3207E1E920001DA8E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = "swp-song";
+				TargetAttributes = {
+					2D8F75AA207E1E920001DA8E = {
+						CreatedOnToolsVersion = 9.3;
+					};
+				};
+			};
+			buildConfigurationList = 2D8F75A6207E1E920001DA8E /* Build configuration list for PBXProject "SwpBluetoothDemo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2D8F75A2207E1E920001DA8E;
+			productRefGroup = 2D8F75AC207E1E920001DA8E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2D8F75AA207E1E920001DA8E /* SwpBluetoothDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2D8F75A9207E1E920001DA8E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D8F75BB207E1E930001DA8E /* LaunchScreen.storyboard in Resources */,
+				2D8F75B8207E1E930001DA8E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7F4CFB6B337C8183F549DFA6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SwpBluetoothDemo/Pods-SwpBluetoothDemo-resources.sh",
+				"${PODS_ROOT}/../../SwpBluetooth/Resources/SwpBluetooth.bundle",
+				"${PODS_ROOT}/SwpCateGory/SwpCateGory/Resources/SwpCateGory.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SwpBluetooth.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SwpCateGory.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwpBluetoothDemo/Pods-SwpBluetoothDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9E9D69A65AD5C58246DDFDDA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SwpBluetoothDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2D8F75A7207E1E920001DA8E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DC3E3D2207F06A300207ED3 /* SwpBluetoothListView.m in Sources */,
+				2DE2DF9C207E4BB50066011A /* SwpBluetoothBaseViewController.m in Sources */,
+				2DC3E3CF207F04B100207ED3 /* SwpBluetoothMethodTestViewController.m in Sources */,
+				2DC3E3CC207EFF7800207ED3 /* SwpBluetoothListViewController.m in Sources */,
+				2DC3E3DE207F311000207ED3 /* SwpBluetoothTempViewController.m in Sources */,
+				2DE2DF9B207E4BB50066011A /* SwpBluetoothRootViewController.m in Sources */,
+				2DE2DF9A207E4BB50066011A /* SwpBluetoothNavigationController.m in Sources */,
+				2D8F75BE207E1E930001DA8E /* main.m in Sources */,
+				2DC3E3D5207F06BD00207ED3 /* SwpBluetoothListCell.m in Sources */,
+				2D8F75B0207E1E920001DA8E /* AppDelegate.m in Sources */,
+				2DC3E3D8207F0AEE00207ED3 /* SwpBluetoothListModel.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2D8F75B9207E1E930001DA8E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2D8F75BA207E1E930001DA8E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2D8F75BF207E1E930001DA8E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		2D8F75C0207E1E930001DA8E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2D8F75C2207E1E930001DA8E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 74CB093D41F93C767E3A8CBE /* Pods-SwpBluetoothDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = SwpBluetoothDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "swp-song.SwpBluetoothDemo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		2D8F75C3207E1E930001DA8E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A1B46FF246B7DCCFBF924DA3 /* Pods-SwpBluetoothDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = SwpBluetoothDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "swp-song.SwpBluetoothDemo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8F75A6207E1E920001DA8E /* Build configuration list for PBXProject "SwpBluetoothDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D8F75BF207E1E930001DA8E /* Debug */,
+				2D8F75C0207E1E930001DA8E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8F75C1207E1E930001DA8E /* Build configuration list for PBXNativeTarget "SwpBluetoothDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D8F75C2207E1E930001DA8E /* Debug */,
+				2D8F75C3207E1E930001DA8E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2D8F75A3207E1E920001DA8E /* Project object */;
+}

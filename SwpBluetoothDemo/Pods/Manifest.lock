@@ -1,0 +1,38 @@
+PODS:
+  - Masonry (1.1.0)
+  - SwpBluetooth (1.0.0)
+  - SwpCateGory/SwpCateGory (2.6.3)
+  - SwpCateGory/SwpColor (2.6.3):
+    - SwpCateGory/SwpCateGory
+  - SwpCateGory/SwpNavigationBar (2.6.3):
+    - SwpCateGory/SwpCateGory
+  - SwpCateGory/SwpSetButton (2.6.3):
+    - SwpCateGory/SwpCateGory
+  - SwpCateGory/SwpSetNavigationBarItem (2.6.3):
+    - SwpCateGory/SwpCateGory
+
+DEPENDENCIES:
+  - Masonry
+  - SwpBluetooth (from `../`)
+  - SwpCateGory/SwpColor
+  - SwpCateGory/SwpNavigationBar
+  - SwpCateGory/SwpSetButton
+  - SwpCateGory/SwpSetNavigationBarItem
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Masonry
+    - SwpCateGory
+
+EXTERNAL SOURCES:
+  SwpBluetooth:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  SwpBluetooth: 51a55fe45af7aa155f58279525eeb833375c3330
+  SwpCateGory: b27df2cd4f2169de51af7a241d0bff38290df67b
+
+PODFILE CHECKSUM: 6c1ce0ae155e564e07bc4b8fb04f1bae841a54a0
+
+COCOAPODS: 1.5.0
