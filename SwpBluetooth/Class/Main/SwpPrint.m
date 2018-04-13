@@ -10,6 +10,8 @@
 
 @interface SwpPrint ()
 
+
+
 @property (nonatomic, strong, readonly) NSMutableData *printerData;
 
 @end
@@ -507,7 +509,7 @@
  *
  *  @param  length  length
  *
- @return NSData
+ *  @return NSData
  */
 - (NSData *)stringWrap:(NSString *)text wrapLength:(NSInteger)length {
     

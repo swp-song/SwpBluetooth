@@ -1,1 +1,1 @@
-../../../../../SwpBluetooth/Class/Main/NSData+SwpPrintText.h
+../../../../../SwpBluetooth/Class/Other/Category/NSData+SwpPrintText.h

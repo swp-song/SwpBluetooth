@@ -84,6 +84,56 @@
 }
 
 
+
+/**
+ *  @author swp_song
+ *
+ *  @brief  swpBluetoothUtilsSetUserDefaults:   ( NSUserDefaults 存 )
+ *
+ *  @param  value   value
+ *
+ *  @param  key     key
+ *
+ *  @return BOOL
+ */
++ (BOOL)swpBluetoothUtilsSetUserDefaults:(id)value forKey:(NSString *)key {
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    [userDefaults setObject:value forKey:key];
+    return [userDefaults synchronize];
+}
+
+
+/**
+ *  @author swp_song
+ *
+ *  @brief  swpBluetoothUtilsGetUserDefaults:   ( NSUserDefaults 取 )
+ *
+ *  @param  key key
+ *
+ *  @return id
+ */
++ (id)swpBluetoothUtilsGetUserDefaults:(NSString *)key {
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    return [userDefaults objectForKey:key];
+}
+
+
+/**
+ *  @author swp_song
+ *
+ *  @brief  swpBluetoothUtilsRemoveUserDefaults:    ( NSUserDefaults 移除 )
+ *
+ *  @param  key key
+ *
+ *  @return BOOL
+ */
++ (BOOL)swpBluetoothUtilsRemoveUserDefaults:(NSString *)key {
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    [userDefaults removeObjectForKey:key];
+    return [userDefaults synchronize];
+}
+
+
 #pragma mark - Privare Methods
 /**
  *  @author swp_song

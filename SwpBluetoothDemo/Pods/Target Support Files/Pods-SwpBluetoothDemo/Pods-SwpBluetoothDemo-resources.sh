@@ -92,10 +92,12 @@ EOM
   esac
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_resource "${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle"
   install_resource "${PODS_ROOT}/../../SwpBluetooth/Resources/SwpBluetooth.bundle"
   install_resource "${PODS_ROOT}/SwpCateGory/SwpCateGory/Resources/SwpCateGory.bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_resource "${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle"
   install_resource "${PODS_ROOT}/../../SwpBluetooth/Resources/SwpBluetooth.bundle"
   install_resource "${PODS_ROOT}/SwpCateGory/SwpCateGory/Resources/SwpCateGory.bundle"
 fi

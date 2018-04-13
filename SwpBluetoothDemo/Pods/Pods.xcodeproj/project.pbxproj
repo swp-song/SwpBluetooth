@@ -7,189 +7,221 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		01141F43DAED2C285E214666DBE9A49E /* UIButton+SwpSetButton.h in Headers */ = {isa = PBXBuildFile; fileRef = E35DB80AA84BD84CE60D0696D8F8FB7B /* UIButton+SwpSetButton.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		100DCBFE39E91CF7A296FABFAB4D7CC6 /* MASViewAttribute.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C0DADAA11BC89161AFBEDB2F7556D34 /* MASViewAttribute.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		13635B78121B99E5C03C92506A161607 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = E330163F5C122A7BE7EBF31CD58A990F /* MASViewAttribute.m */; };
-		16AA928187D7D994CF3249FDA5D5CBCF /* SwpBluetooth-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DEB5157B66FBF7FB9A652061B29D2C0 /* SwpBluetooth-dummy.m */; };
-		214DF0B6664033C87D6B846599FB477A /* NSLayoutConstraint+MASDebugAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C60A1D0FF91AB847A19DC7D3DE25397 /* NSLayoutConstraint+MASDebugAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		216614B60B373F44F6C13E76DF2BFAFB /* SwpBluetoothModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 1CB64F352C04A2C6818733F1B16856E4 /* SwpBluetoothModel.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		2BB5AB6C9BC5164D35494FE082644D48 /* SwpBluetoothDatas.h in Headers */ = {isa = PBXBuildFile; fileRef = 242C356E7AEC4513115185ED630185C9 /* SwpBluetoothDatas.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		2DBB74B8B5DDB1F621433DD12BF35102 /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = B2C2F4872C9DB326E114601AA2EB2317 /* MASViewConstraint.m */; };
-		3E8E6916C563B9CB12AA417275FC6EB3 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B7107F34C7D505438D8E46045BD6727 /* NSLayoutConstraint+MASDebugAdditions.m */; };
-		4A90AAFAF3843276C4C8AC18FEE01CC0 /* UINavigationBar+SwpNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 03665B2969537A6373EAB089C24F9115 /* UINavigationBar+SwpNavigationBar.m */; };
-		4FBCD6A3DD9536F33C92A9813DAFDE52 /* SwpBluetoothModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EA75BCABB77C311E6F304B838157EFD /* SwpBluetoothModel.m */; };
-		523F69012549DCADB26D11EFB6593B5B /* Masonry.h in Headers */ = {isa = PBXBuildFile; fileRef = 1663BFD2520A327646482C7CF92DB178 /* Masonry.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		5261F7EF1E7C50DF1AC1A7839D697AFA /* UINavigationBar+SwpNavigationBar.h in Headers */ = {isa = PBXBuildFile; fileRef = E046FC4293E31AB8B520129AEEFC781F /* UINavigationBar+SwpNavigationBar.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		5EBFADB0ACACA114B98082EBD8FDA650 /* MASViewConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = C3766DD8C76094101DE354D4F8970DCC /* MASViewConstraint.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		61CCEA01CBE8EFFA5515E7A0D8635AAE /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = E2755919E702AFE1BE909E205FC423A4 /* MASCompositeConstraint.m */; };
-		6209E20926D79222E59F58B962BFAA1E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93C4DB2473E26C7B904DF1DD43968217 /* UIKit.framework */; };
-		6405C7D90B76533D76A10ADF9BFC00FE /* NSData+SwpPrintText.h in Headers */ = {isa = PBXBuildFile; fileRef = BB32E41F22C90CADB928CD9DDD8C27B9 /* NSData+SwpPrintText.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		68F98758BA84B8EC3472A8C6FD646D16 /* Masonry-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 544D44742C15792F9887FA16D3CCEBB0 /* Masonry-dummy.m */; };
-		6FBEF9BEF976F73220F5EA0246FA6674 /* MASConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 44C40AB82EA85E05D92D05EC51D75DF7 /* MASConstraint.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		747F4D4F951681635A5650057B2023B2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93C4DB2473E26C7B904DF1DD43968217 /* UIKit.framework */; };
-		7AC0D0965486ED43C064F1BC177ACBC9 /* MASUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = B09F786E5C0E4CA5657D20E346A70BF8 /* MASUtilities.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		7BDDE51AF16FA53A09506EDB91E1C3C2 /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A89CD02DD756E63027AD4FE2F75A9A4 /* NSArray+MASAdditions.m */; };
-		8140393AAC559A5D9DF8932AD1F73A78 /* NSData+SwpPrintText.m in Sources */ = {isa = PBXBuildFile; fileRef = EB9A296395EFA7213BEB3C825A5909EE /* NSData+SwpPrintText.m */; };
-		81C1291C7ABA4942277F5756671AEE37 /* MASConstraint+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = DEB9EC68D991CD38F5B7F7E60D0ACEA3 /* MASConstraint+Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		8248D754E0E6513DEBC76CB64565FC32 /* SwpBluetoothBase.h in Headers */ = {isa = PBXBuildFile; fileRef = C5FA850DC88C68CC38C0E9A1961B5B08 /* SwpBluetoothBase.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		84BC3AED5572CCC9C4F69DD0484BE169 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93C4DB2473E26C7B904DF1DD43968217 /* UIKit.framework */; };
-		86B2DF4CC6E598AAA73D0CC6EEBA0E96 /* ViewController+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BD4CD3528771FD6F66DCAAD6063EFA7 /* ViewController+MASAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		89450A58FD91E5B227171FC75160E4EA /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = D27ABC854FD2F53670D654CEB275DD42 /* MASConstraint.m */; };
-		8BCABEF7BF3A297129FEF2CD40F43635 /* UIBarButtonItem+SwpSetNavigationBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D058E084A0C56351173275198C5FDC6C /* UIBarButtonItem+SwpSetNavigationBarItem.m */; };
-		90EBD1890FF6F2AD07AF720AFEFF361D /* SwpCateGory.m in Sources */ = {isa = PBXBuildFile; fileRef = A91E260A065A6A1B0E39583CFD3E4AF6 /* SwpCateGory.m */; };
-		91DFD399F979F556B9C30BE2EC69B2DB /* UIColor+SwpColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 82CCDFF73D0A36210CC3CDB1B4C9814D /* UIColor+SwpColor.m */; };
-		92711327ED7920702A69A828271279AE /* View+MASShorthandAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = E3AFEEA5F5B6D874C811840002D20F71 /* View+MASShorthandAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		93FEF4D91D6C3B644204173C3F786BC8 /* SwpCateGory.h in Headers */ = {isa = PBXBuildFile; fileRef = 38E78E661CD6D96B83EE2D55C2BD2487 /* SwpCateGory.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		955BE39896CA35F2A585DC3309E5FDA5 /* MASLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC2DC1729252903DF2A0EB33A8F076D /* MASLayoutConstraint.m */; };
-		993CCD0EAB95AFCD204092905A78E246 /* UIColor+SwpColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 58511D96880518288171BA05A8AF8869 /* UIColor+SwpColor.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		9AB27A7F752AB644728D50B0228A070E /* MASLayoutConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = CECED1D03120A7434E0F495ABB48CECE /* MASLayoutConstraint.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		9BFAE06AC2F3B426C64EEDBF8C99A69E /* NSArray+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D00363763FC81D7890BFC5A6D6C95D2 /* NSArray+MASAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		9C546A34F794C1F727DE14DD30579D93 /* SwpBluetoothUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9EAB9B0B95ACDFAE8CF0D1DBE05BD7 /* SwpBluetoothUtils.m */; };
-		A080B5D8CBCBB381C29C988D8051BC51 /* SwpBluetooth.h in Headers */ = {isa = PBXBuildFile; fileRef = F6DAC4FFF14727CD2CB04E163992131C /* SwpBluetooth.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		A12D95324CD952D447D602DA9EDAD1EA /* UIButton+SwpSetButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A79A66A29CAC1DBB6B877EDE65893A0A /* UIButton+SwpSetButton.m */; };
-		A1FA046FDFC42676D17FEC387B10D24A /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D9F1ABADF52A94FC97A24DF1F1F9FD6 /* View+MASAdditions.m */; };
-		B5EC5518E18B05A5334C49ABBF4C78F7 /* MASConstraintMaker.h in Headers */ = {isa = PBXBuildFile; fileRef = 74D6EFB17498409435AEEFA9462C4414 /* MASConstraintMaker.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		C3E769B9A834AF7F6F09480517527A3C /* SwpCateGory-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AE09B0188A954070A91A332F30B2D7BD /* SwpCateGory-dummy.m */; };
-		C6E83C10646E2DF6C83A578CE6AF0E5A /* View+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 75FA726D28A89B0BEC0E472AC13199FD /* View+MASAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		C7080782344F843F1E2386465EF2A68A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5989C451E6E368AF1F3A30D5A91D420C /* Foundation.framework */; };
-		C72F337FAC7068BE8BD6B478903C6273 /* SwpBluetooth.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C5D3EE2B36298D38C7A7C1A52DB17A /* SwpBluetooth.m */; };
-		CD06CA14CF42D6587BBC87FE6136EDCE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5989C451E6E368AF1F3A30D5A91D420C /* Foundation.framework */; };
-		CD36991E1BA4A5C47F3C244AA3444A00 /* SwpPrint.m in Sources */ = {isa = PBXBuildFile; fileRef = F3DD688F225F887CF8FDABCD96508330 /* SwpPrint.m */; };
-		D3BFD7A4AAD0F1EAB5B039AC7213A9D0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5989C451E6E368AF1F3A30D5A91D420C /* Foundation.framework */; };
-		D54699E2E53F43A1E28F22B3E45017D2 /* SwpBluetoothHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = CC052E60FD6E283B31596FBE4228039F /* SwpBluetoothHeader.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		D79CBD2BB4676AE6D897C08C2E8F13C9 /* SwpBluetoothBase.m in Sources */ = {isa = PBXBuildFile; fileRef = A06B8A5E42C23EC1EA828338C3D2EB87 /* SwpBluetoothBase.m */; };
-		D7CE05A743B7ACD50796191FA442814C /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = ACF47CE99A04B335F7BBC3B09FBFC3B6 /* ViewController+MASAdditions.m */; };
-		DF7F88B58B564EDF169EC0C9CF8E5124 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD9C229B1F16AF707F14569727CCB09 /* MASConstraintMaker.m */; };
-		E2EA63C5668D1CDB687795590D3D5AF2 /* Pods-SwpBluetoothDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8264E6609A166BF1C9ACD7DCFC2E47E9 /* Pods-SwpBluetoothDemo-dummy.m */; };
-		E7DD9B77263C1D09B23CA8D857A70C52 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CD2BE03D5DF4F1A15D4B4E9B19EA1D5 /* CoreBluetooth.framework */; };
-		E8032C65A4A110759066F1CD63B597C4 /* UIBarButtonItem+SwpSetNavigationBarItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D2B6C774D5D25161E241E5F17C132D3 /* UIBarButtonItem+SwpSetNavigationBarItem.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		EADEC21EDE56027D765CA82473C6DA37 /* SwpPrint.h in Headers */ = {isa = PBXBuildFile; fileRef = 483951D4323F1F093475EE40100006F9 /* SwpPrint.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		ECA048443F87E2A21C8E0E8E1A3EA8AA /* SwpBluetoothUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = C9D593CEBF663E5031FA8DFC248340C4 /* SwpBluetoothUtils.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		F0B56A7D38A399A2F67F9920C9526A66 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5989C451E6E368AF1F3A30D5A91D420C /* Foundation.framework */; };
-		F861D2DADCE8A8F94F1DCB22EB8A6CE2 /* MASCompositeConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 7FBF5D6B6FCD4FE6F095F8578D4C2171 /* MASCompositeConstraint.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		FB415F79751F1A1F2203183C3CEE0723 /* NSArray+MASShorthandAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = AD16E4D4F7557381FA7228DCC36B59DE /* NSArray+MASShorthandAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		001A604959B9B276DCC32D692A87FE8A /* UIBarButtonItem+SwpSetNavigationBarItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B9E6999752CFF30573CC2C781BC60D3 /* UIBarButtonItem+SwpSetNavigationBarItem.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		02F847305FE6C78188ADCDD415111BD2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F2F95B1147AA40B0F0742A6EC7D332F /* Foundation.framework */; };
+		04096DF694C978D3241630FF736725E9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDB6AD86EB47A8F92071F20A54B9BEB5 /* UIKit.framework */; };
+		100DCBFE39E91CF7A296FABFAB4D7CC6 /* MASViewAttribute.h in Headers */ = {isa = PBXBuildFile; fileRef = B26B931092B9D4B9FBF82E3CB9DB06A6 /* MASViewAttribute.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		13635B78121B99E5C03C92506A161607 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = BBF77CAF71CFB5E90F836727C924C9CB /* MASViewAttribute.m */; };
+		214DF0B6664033C87D6B846599FB477A /* NSLayoutConstraint+MASDebugAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 09ACED46630D11818F5012614E79F16B /* NSLayoutConstraint+MASDebugAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		25A90C9C285E29B121B1920B7354494B /* SwpBluetoothDatas.h in Headers */ = {isa = PBXBuildFile; fileRef = 98222D2F7CA75D610B5B627680CE5355 /* SwpBluetoothDatas.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		2DBB74B8B5DDB1F621433DD12BF35102 /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = B7F54E2FD202FA507BD61CB611A7078C /* MASViewConstraint.m */; };
+		310D2B6F8DA36B79D2FD44D184EDBFF0 /* SVProgressAnimatedView.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F911A039FAB1AC4841A77459582B761 /* SVProgressAnimatedView.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		381DEC36DF8A9B2C4B536150C1EFAF5F /* SwpCateGory.m in Sources */ = {isa = PBXBuildFile; fileRef = B6C034E4418BEB58B7C723179F9D9468 /* SwpCateGory.m */; };
+		3E8E6916C563B9CB12AA417275FC6EB3 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DEA4EA9FF83B67643EC26EC1C18435E /* NSLayoutConstraint+MASDebugAdditions.m */; };
+		3F67F00C728867417547A3F36AFCD0C9 /* UIColor+SwpColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 10EE401C770D44A11D5FAA6335907113 /* UIColor+SwpColor.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		4225C19F17D50FD09E2DB5BE253AA1E1 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = E5D5269AA94B448AE88F15C7715BB796 /* SVProgressHUD.m */; };
+		4C41B452B37235E48CEA9DE04886B55E /* SwpCateGory-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 30BA40A40846549F68414ABD2BE6A5C3 /* SwpCateGory-dummy.m */; };
+		4D4A5C864E81DC9FE1BA155465F22A91 /* SVProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 350E43C1F5F23EC29D9EC3BD25B8C075 /* SVProgressHUD.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		4DED377FBB1F04B88A06F78F47B10B4F /* NSData+SwpPrintText.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C24DF95883C87F05B1AF89D3E97A3CB /* NSData+SwpPrintText.m */; };
+		523F69012549DCADB26D11EFB6593B5B /* Masonry.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B2CF215A182C9A9468ABB67C555923B /* Masonry.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		5951F7B3FCCEFFA0DE9313A0C240B88E /* UIColor+SwpColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 051077876760AB99FCE4E53E1645798C /* UIColor+SwpColor.m */; };
+		5DD5E492B47366563D2BEB9DFABE44AB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDB6AD86EB47A8F92071F20A54B9BEB5 /* UIKit.framework */; };
+		5EBFADB0ACACA114B98082EBD8FDA650 /* MASViewConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = F04A9A793831A71C7250263575B428D1 /* MASViewConstraint.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		61CCEA01CBE8EFFA5515E7A0D8635AAE /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = A794F221FC99C2C060605F75653F667B /* MASCompositeConstraint.m */; };
+		6209E20926D79222E59F58B962BFAA1E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDB6AD86EB47A8F92071F20A54B9BEB5 /* UIKit.framework */; };
+		633B1EC207783F44144D0B20DFE21931 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40C96533784058FDAFA921E2AAEA8CED /* CoreBluetooth.framework */; };
+		67752DB3AFB2F145C1C00CE3610781BA /* SwpBluetoothModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C207A06A7D04ACB0347BBD5D9C01A58 /* SwpBluetoothModel.m */; };
+		68A064CE70E7C1FBA448A2CFF5FC2182 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB9F3E0806E6347C3E11B6C32F0DF478 /* QuartzCore.framework */; };
+		68F98758BA84B8EC3472A8C6FD646D16 /* Masonry-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B3DB1DB806AC7BD238A518D9688D065 /* Masonry-dummy.m */; };
+		6FBEF9BEF976F73220F5EA0246FA6674 /* MASConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 0DE6E25FB3F72A4BA6FF2CAB5218DBE7 /* MASConstraint.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		739EAAF72C1C54497624649066BF3EE5 /* UIBarButtonItem+SwpSetNavigationBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DC753F083E275F10EAA088981DF311A7 /* UIBarButtonItem+SwpSetNavigationBarItem.m */; };
+		74948B81DF0A387C5B3047376DBA1F5C /* SwpBluetooth-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 034407DF3073E56A44F400CFF4AA2F04 /* SwpBluetooth-dummy.m */; };
+		7AC0D0965486ED43C064F1BC177ACBC9 /* MASUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 30AF2B31D94CB92928F239C8C8924111 /* MASUtilities.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		7BDDE51AF16FA53A09506EDB91E1C3C2 /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A069625BFF05DD5EFD0229CEE00CB4C5 /* NSArray+MASAdditions.m */; };
+		7FB1B7FB5F11EB58F8C2D567EE01486D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F2F95B1147AA40B0F0742A6EC7D332F /* Foundation.framework */; };
+		81C1291C7ABA4942277F5756671AEE37 /* MASConstraint+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 9119E89B6C41FF3E41BF0086E5D704AE /* MASConstraint+Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		834AD9576BB05BAC2AB54C8C4674EF4C /* SwpBluetoothHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = E00CBD0EA4A6F1A4B48DED2681E3F9B9 /* SwpBluetoothHeader.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		86B2DF4CC6E598AAA73D0CC6EEBA0E96 /* ViewController+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 29D11530C39730F535B532E217F20923 /* ViewController+MASAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		8916187FBB625C6CA514566D181BB770 /* SwpBluetoothUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 05181044D2A988A5E6D62ECC5D794D67 /* SwpBluetoothUtils.m */; };
+		89450A58FD91E5B227171FC75160E4EA /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = DC5EE168B79B3DEE291935A92F21715E /* MASConstraint.m */; };
+		8B0690D572AE0D724B2DA6DAAD209E5D /* SwpPrint.h in Headers */ = {isa = PBXBuildFile; fileRef = FB55F66C1B648CDA0683FD19B8003275 /* SwpPrint.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		8BF41218EDFD77ADBBD238EDC4FBBEFD /* SVIndefiniteAnimatedView.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D33EB8758D599EDA77FA226E91D8269 /* SVIndefiniteAnimatedView.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		8D9C51BCFECE3E0FE8BF7DE19A769ED8 /* SwpBluetoothUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 623050C275B17ECDA55BF0E75786275A /* SwpBluetoothUtils.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		907AA6FFF388C25882B5B92812F99CE3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F2F95B1147AA40B0F0742A6EC7D332F /* Foundation.framework */; };
+		92711327ED7920702A69A828271279AE /* View+MASShorthandAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DC1C88CBE0B6DD35BB968D02EF6BC3B /* View+MASShorthandAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		955BE39896CA35F2A585DC3309E5FDA5 /* MASLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 652F28B6E88E8ADB3B982F9E41A965E8 /* MASLayoutConstraint.m */; };
+		9A87C73F174B2DF79C48F3296833944A /* SwpBluetooth.m in Sources */ = {isa = PBXBuildFile; fileRef = FBE7AB1B44FB06CA3282169F8DF5D0D6 /* SwpBluetooth.m */; };
+		9AB27A7F752AB644728D50B0228A070E /* MASLayoutConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 9558A08057A8D3D6E4C77112C4864AEC /* MASLayoutConstraint.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		9BFAE06AC2F3B426C64EEDBF8C99A69E /* NSArray+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = A34E3B030248BBCE0DA346D3239B0AC3 /* NSArray+MASAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		9CF2E66637D79D4AE281AA08D93F8EA4 /* SwpBluetoothModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 9664902890C11ADBFA43B882B5E65C65 /* SwpBluetoothModel.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		9F79825F27DBC78C9FF398E6F0FC6EC9 /* UINavigationBar+SwpNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = FBBE9ECB470F3321A2FCBC402F8C5B90 /* UINavigationBar+SwpNavigationBar.m */; };
+		A1FA046FDFC42676D17FEC387B10D24A /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F20A638596EEB7D17723FAC253E6A31D /* View+MASAdditions.m */; };
+		A2CE9428F0EFBCF618157D9D935DD3B6 /* NSData+SwpPrintText.h in Headers */ = {isa = PBXBuildFile; fileRef = 4468DDC01702DF5DB1BD99F4C803FE3C /* NSData+SwpPrintText.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B03CAF1F7869C42B583BA6904BAA9766 /* UIButton+SwpSetButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 71B12CE09801D10F360490B57B2A7C04 /* UIButton+SwpSetButton.m */; };
+		B1DD074D99E2D00F7EF8EB6D059824D9 /* SwpBluetoothBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 189D08C49FEF49D71196C4BB126D22A2 /* SwpBluetoothBase.m */; };
+		B5EC5518E18B05A5334C49ABBF4C78F7 /* MASConstraintMaker.h in Headers */ = {isa = PBXBuildFile; fileRef = 047AE7E9AAB6554B6848224FC4B17713 /* MASConstraintMaker.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		BB12D5744B4B0EA1B7631A99A335F42B /* UIButton+SwpSetButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 62232C020BECD3686057435372BADF72 /* UIButton+SwpSetButton.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		BDF48F9F5464B8DA9EEA695C14228100 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F2F95B1147AA40B0F0742A6EC7D332F /* Foundation.framework */; };
+		C2C738A53140DC074F4BD9D0DEAE101E /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = D41A00430D77948D0F015772A2CDC739 /* SVIndefiniteAnimatedView.m */; };
+		C6E83C10646E2DF6C83A578CE6AF0E5A /* View+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B9CA19A4475648557F24801750EB297 /* View+MASAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		CB3C8D86C6A1B8A7521614B5537BB7D2 /* SwpCateGory.h in Headers */ = {isa = PBXBuildFile; fileRef = D281F5EAC039FA6EFD8EF93DF9D08282 /* SwpCateGory.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		CBA06EA27B82A81E5DB6EB3E65DFDE69 /* SwpBluetooth.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D153732685E514B42748C727141F83D /* SwpBluetooth.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D07ED4BCB72BCB17D1170609530D85FC /* UINavigationBar+SwpNavigationBar.h in Headers */ = {isa = PBXBuildFile; fileRef = 7395726F99375AE9CBAD78C4E5B1A43E /* UINavigationBar+SwpNavigationBar.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D4AF48FDA6D5185ABFF6045784606CFF /* SVRadialGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = FF2C4EF562F1278297C47CCF8E0F8FF3 /* SVRadialGradientLayer.m */; };
+		D62C6C453A285FE0DD0DE03B66AE578C /* SVRadialGradientLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = D1E18950A48AEACB46B86EAD09B2F607 /* SVRadialGradientLayer.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D7CE05A743B7ACD50796191FA442814C /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE330563E26FA1D4D695967BA1C2785 /* ViewController+MASAdditions.m */; };
+		D924F010E85DCE40082719C3EB9EE042 /* Pods-SwpBluetoothDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8264E6609A166BF1C9ACD7DCFC2E47E9 /* Pods-SwpBluetoothDemo-dummy.m */; };
+		DF7F88B58B564EDF169EC0C9CF8E5124 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 170481D8D94691815158AFCBCF362A73 /* MASConstraintMaker.m */; };
+		EB16CB33D191E62E0EB3576BC6BD57C5 /* SVProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E48131BDBA0A4346A0DC2A8EFC6A4BD /* SVProgressHUD-dummy.m */; };
+		EE04BDBDFAAE1424672C288A33CD63C3 /* SwpPrint.m in Sources */ = {isa = PBXBuildFile; fileRef = B84A1B9DE82547B5492D7B7F72C65CB7 /* SwpPrint.m */; };
+		EFAC5B8D66377C443DB53602477B66EB /* SwpBluetoothBase.h in Headers */ = {isa = PBXBuildFile; fileRef = 44C5782363DACC765382A7F146710712 /* SwpBluetoothBase.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		F0B56A7D38A399A2F67F9920C9526A66 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F2F95B1147AA40B0F0742A6EC7D332F /* Foundation.framework */; };
+		F6D57FC23BDA7AD5A339313329ACB720 /* SVProgressAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD1025CCF3ED836429F685500CB9FF6F /* SVProgressAnimatedView.m */; };
+		F861D2DADCE8A8F94F1DCB22EB8A6CE2 /* MASCompositeConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CC32462587089ACEED84263325EC5DB /* MASCompositeConstraint.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		FB415F79751F1A1F2203183C3CEE0723 /* NSArray+MASShorthandAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = C78C02C8011CBA5B3F4BA7B68586829A /* NSArray+MASShorthandAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		4B4D6275103291A48E5E373662D87824 /* PBXContainerItemProxy */ = {
+		052397EB68DF8EC12A3087A5FA27C22A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 41303AA714EA487035EE7B2735631EDB;
+			remoteInfo = SwpBluetooth;
+		};
+		64AC205F8867CC8DB8FE23F4C17E6576 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 95E5B4FD803DD42355693E09FF683BA2;
+			remoteInfo = SVProgressHUD;
+		};
+		BDB4D6F8E3B123FAC51C38F1AA454667 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 9DC8D9E02903E93BD0B2FEC9D846EA20;
 			remoteInfo = Masonry;
 		};
-		5E06EEB2B2E135533FAE62BC742AC1E1 /* PBXContainerItemProxy */ = {
+		C2CDA8190812102D05E24D4ADD31BE3B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = EB3429C17ECA038B74360F719EDE2FA1;
-			remoteInfo = SwpBluetooth;
-		};
-		B4D6E945DEAAB3507CC2759D8F4C8636 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 9F4D01A7D27876B96C0F4B8CF52F6AB8;
+			remoteGlobalIDString = 49D56C745A0E5F923241F0C9D3E1B041;
 			remoteInfo = SwpCateGory;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		03665B2969537A6373EAB089C24F9115 /* UINavigationBar+SwpNavigationBar.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UINavigationBar+SwpNavigationBar.m"; path = "SwpCateGory/Class/UIKit/UINavigationBarCateGory/SwpNavigationBar/UINavigationBar+SwpNavigationBar.m"; sourceTree = "<group>"; };
-		0B69DC175E65FDF131BC5D44650CC532 /* libSwpBluetooth.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libSwpBluetooth.a; path = libSwpBluetooth.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		0CD9C229B1F16AF707F14569727CCB09 /* MASConstraintMaker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASConstraintMaker.m; path = Masonry/MASConstraintMaker.m; sourceTree = "<group>"; };
+		034407DF3073E56A44F400CFF4AA2F04 /* SwpBluetooth-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwpBluetooth-dummy.m"; sourceTree = "<group>"; };
+		047AE7E9AAB6554B6848224FC4B17713 /* MASConstraintMaker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASConstraintMaker.h; path = Masonry/MASConstraintMaker.h; sourceTree = "<group>"; };
+		051077876760AB99FCE4E53E1645798C /* UIColor+SwpColor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIColor+SwpColor.m"; path = "SwpCateGory/Class/UIKit/UIColorCateGory/SwpColor/UIColor+SwpColor.m"; sourceTree = "<group>"; };
+		05181044D2A988A5E6D62ECC5D794D67 /* SwpBluetoothUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SwpBluetoothUtils.m; sourceTree = "<group>"; };
+		08732A97F53C3A80771F8C19FF147352 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		09ACED46630D11818F5012614E79F16B /* NSLayoutConstraint+MASDebugAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSLayoutConstraint+MASDebugAdditions.h"; path = "Masonry/NSLayoutConstraint+MASDebugAdditions.h"; sourceTree = "<group>"; };
+		0AB6322C34DF603005F56272DAD7A8D7 /* SwpCateGory-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwpCateGory-prefix.pch"; sourceTree = "<group>"; };
+		0C207A06A7D04ACB0347BBD5D9C01A58 /* SwpBluetoothModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SwpBluetoothModel.m; sourceTree = "<group>"; };
+		0DE6E25FB3F72A4BA6FF2CAB5218DBE7 /* MASConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASConstraint.h; path = Masonry/MASConstraint.h; sourceTree = "<group>"; };
 		0DFEA925BCECB56219C9C310A5B1ABB0 /* Pods-SwpBluetoothDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwpBluetoothDemo.debug.xcconfig"; sourceTree = "<group>"; };
-		12AB948D37CB00D0674DA1774C05AA49 /* SwpBluetooth-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwpBluetooth-prefix.pch"; sourceTree = "<group>"; };
+		10EE401C770D44A11D5FAA6335907113 /* UIColor+SwpColor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+SwpColor.h"; path = "SwpCateGory/Class/UIKit/UIColorCateGory/SwpColor/UIColor+SwpColor.h"; sourceTree = "<group>"; };
 		1392BB3F518B57033A05A65B21D4B68A /* Pods-SwpBluetoothDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SwpBluetoothDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
-		1663BFD2520A327646482C7CF92DB178 /* Masonry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Masonry.h; path = Masonry/Masonry.h; sourceTree = "<group>"; };
-		1C60A1D0FF91AB847A19DC7D3DE25397 /* NSLayoutConstraint+MASDebugAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSLayoutConstraint+MASDebugAdditions.h"; path = "Masonry/NSLayoutConstraint+MASDebugAdditions.h"; sourceTree = "<group>"; };
-		1CB64F352C04A2C6818733F1B16856E4 /* SwpBluetoothModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SwpBluetoothModel.h; sourceTree = "<group>"; };
-		210D1E7B8F084E98D5CD1DD1D357EF28 /* SwpCateGory-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwpCateGory-prefix.pch"; sourceTree = "<group>"; };
-		242C356E7AEC4513115185ED630185C9 /* SwpBluetoothDatas.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SwpBluetoothDatas.h; sourceTree = "<group>"; };
-		25A0669877826DF434106EBD719F6C61 /* SwpCateGory.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwpCateGory.xcconfig; sourceTree = "<group>"; };
-		2B7107F34C7D505438D8E46045BD6727 /* NSLayoutConstraint+MASDebugAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSLayoutConstraint+MASDebugAdditions.m"; path = "Masonry/NSLayoutConstraint+MASDebugAdditions.m"; sourceTree = "<group>"; };
-		2D2B6C774D5D25161E241E5F17C132D3 /* UIBarButtonItem+SwpSetNavigationBarItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIBarButtonItem+SwpSetNavigationBarItem.h"; path = "SwpCateGory/Class/UIKit/UIBarButtonItemCateGory/SwpSetNavigationBarItem/UIBarButtonItem+SwpSetNavigationBarItem.h"; sourceTree = "<group>"; };
-		2D9F1ABADF52A94FC97A24DF1F1F9FD6 /* View+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "View+MASAdditions.m"; path = "Masonry/View+MASAdditions.m"; sourceTree = "<group>"; };
-		2EA75BCABB77C311E6F304B838157EFD /* SwpBluetoothModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SwpBluetoothModel.m; sourceTree = "<group>"; };
+		170481D8D94691815158AFCBCF362A73 /* MASConstraintMaker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASConstraintMaker.m; path = Masonry/MASConstraintMaker.m; sourceTree = "<group>"; };
+		189D08C49FEF49D71196C4BB126D22A2 /* SwpBluetoothBase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SwpBluetoothBase.m; sourceTree = "<group>"; };
+		1B2CF215A182C9A9468ABB67C555923B /* Masonry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Masonry.h; path = Masonry/Masonry.h; sourceTree = "<group>"; };
+		1DC1C88CBE0B6DD35BB968D02EF6BC3B /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "View+MASShorthandAdditions.h"; path = "Masonry/View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		24CDF915DAAC7E37C8774B3F7CDE35DB /* libSwpBluetooth.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libSwpBluetooth.a; path = libSwpBluetooth.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		293E87F6653C661ADBC024C9908CAB96 /* SwpBluetooth.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = SwpBluetooth.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		29D11530C39730F535B532E217F20923 /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ViewController+MASAdditions.h"; path = "Masonry/ViewController+MASAdditions.h"; sourceTree = "<group>"; };
+		2BBBA2A8DFBBB396949302498B94CB73 /* SwpBluetooth-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwpBluetooth-prefix.pch"; sourceTree = "<group>"; };
 		2F59D09141B312638C765CC2F293666E /* Pods-SwpBluetoothDemo-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwpBluetoothDemo-resources.sh"; sourceTree = "<group>"; };
-		37783D22CE386DEB4C9BF6BD33E3731F /* Masonry.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Masonry.xcconfig; sourceTree = "<group>"; };
-		38E78E661CD6D96B83EE2D55C2BD2487 /* SwpCateGory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SwpCateGory.h; path = SwpCateGory/Class/SwpCateGory/SwpCateGory.h; sourceTree = "<group>"; };
-		3DEB5157B66FBF7FB9A652061B29D2C0 /* SwpBluetooth-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwpBluetooth-dummy.m"; sourceTree = "<group>"; };
-		44C40AB82EA85E05D92D05EC51D75DF7 /* MASConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASConstraint.h; path = Masonry/MASConstraint.h; sourceTree = "<group>"; };
-		483951D4323F1F093475EE40100006F9 /* SwpPrint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SwpPrint.h; sourceTree = "<group>"; };
-		4BD4CD3528771FD6F66DCAAD6063EFA7 /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ViewController+MASAdditions.h"; path = "Masonry/ViewController+MASAdditions.h"; sourceTree = "<group>"; };
-		4C0DADAA11BC89161AFBEDB2F7556D34 /* MASViewAttribute.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASViewAttribute.h; path = Masonry/MASViewAttribute.h; sourceTree = "<group>"; };
-		4D2B03CCAD63C51DFD85EC551B9FFDCA /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		544D44742C15792F9887FA16D3CCEBB0 /* Masonry-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Masonry-dummy.m"; sourceTree = "<group>"; };
-		58511D96880518288171BA05A8AF8869 /* UIColor+SwpColor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+SwpColor.h"; path = "SwpCateGory/Class/UIKit/UIColorCateGory/SwpColor/UIColor+SwpColor.h"; sourceTree = "<group>"; };
-		5989C451E6E368AF1F3A30D5A91D420C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		5A89CD02DD756E63027AD4FE2F75A9A4 /* NSArray+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+MASAdditions.m"; path = "Masonry/NSArray+MASAdditions.m"; sourceTree = "<group>"; };
-		5CD2BE03D5DF4F1A15D4B4E9B19EA1D5 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/CoreBluetooth.framework; sourceTree = DEVELOPER_DIR; };
-		6D00363763FC81D7890BFC5A6D6C95D2 /* NSArray+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+MASAdditions.h"; path = "Masonry/NSArray+MASAdditions.h"; sourceTree = "<group>"; };
-		6F14DD1DE8DF8305C1DF74C604E3C2F1 /* libSwpCateGory.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libSwpCateGory.a; path = libSwpCateGory.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F911A039FAB1AC4841A77459582B761 /* SVProgressAnimatedView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVProgressAnimatedView.h; path = SVProgressHUD/SVProgressAnimatedView.h; sourceTree = "<group>"; };
+		30AF2B31D94CB92928F239C8C8924111 /* MASUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASUtilities.h; path = Masonry/MASUtilities.h; sourceTree = "<group>"; };
+		30BA40A40846549F68414ABD2BE6A5C3 /* SwpCateGory-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwpCateGory-dummy.m"; sourceTree = "<group>"; };
+		350E43C1F5F23EC29D9EC3BD25B8C075 /* SVProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVProgressHUD.h; path = SVProgressHUD/SVProgressHUD.h; sourceTree = "<group>"; };
+		3D153732685E514B42748C727141F83D /* SwpBluetooth.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SwpBluetooth.h; sourceTree = "<group>"; };
+		40C96533784058FDAFA921E2AAEA8CED /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/CoreBluetooth.framework; sourceTree = DEVELOPER_DIR; };
+		4468DDC01702DF5DB1BD99F4C803FE3C /* NSData+SwpPrintText.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSData+SwpPrintText.h"; sourceTree = "<group>"; };
+		44C5782363DACC765382A7F146710712 /* SwpBluetoothBase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SwpBluetoothBase.h; sourceTree = "<group>"; };
+		4792809CE87F30F97B1A3EF5DFA3459D /* libMasonry.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libMasonry.a; path = libMasonry.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C24DF95883C87F05B1AF89D3E97A3CB /* NSData+SwpPrintText.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSData+SwpPrintText.m"; sourceTree = "<group>"; };
+		5D33EB8758D599EDA77FA226E91D8269 /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVIndefiniteAnimatedView.h; path = SVProgressHUD/SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
+		5F2F95B1147AA40B0F0742A6EC7D332F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		62232C020BECD3686057435372BADF72 /* UIButton+SwpSetButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIButton+SwpSetButton.h"; path = "SwpCateGory/Class/UIKit/UIButtonCateGory/SwpSetButton/UIButton+SwpSetButton.h"; sourceTree = "<group>"; };
+		623050C275B17ECDA55BF0E75786275A /* SwpBluetoothUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SwpBluetoothUtils.h; sourceTree = "<group>"; };
+		628CE58BAB9507290AEC1E51E923D93C /* SwpBluetooth.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwpBluetooth.xcconfig; sourceTree = "<group>"; };
+		652F28B6E88E8ADB3B982F9E41A965E8 /* MASLayoutConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASLayoutConstraint.m; path = Masonry/MASLayoutConstraint.m; sourceTree = "<group>"; };
+		6DEA4EA9FF83B67643EC26EC1C18435E /* NSLayoutConstraint+MASDebugAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSLayoutConstraint+MASDebugAdditions.m"; path = "Masonry/NSLayoutConstraint+MASDebugAdditions.m"; sourceTree = "<group>"; };
+		71B12CE09801D10F360490B57B2A7C04 /* UIButton+SwpSetButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIButton+SwpSetButton.m"; path = "SwpCateGory/Class/UIKit/UIButtonCateGory/SwpSetButton/UIButton+SwpSetButton.m"; sourceTree = "<group>"; };
 		72F0E804230B9719889B5E53D1277988 /* Pods-SwpBluetoothDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SwpBluetoothDemo-acknowledgements.plist"; sourceTree = "<group>"; };
-		74D6EFB17498409435AEEFA9462C4414 /* MASConstraintMaker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASConstraintMaker.h; path = Masonry/MASConstraintMaker.h; sourceTree = "<group>"; };
-		75C5D3EE2B36298D38C7A7C1A52DB17A /* SwpBluetooth.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SwpBluetooth.m; sourceTree = "<group>"; };
-		75FA726D28A89B0BEC0E472AC13199FD /* View+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "View+MASAdditions.h"; path = "Masonry/View+MASAdditions.h"; sourceTree = "<group>"; };
-		7FBF5D6B6FCD4FE6F095F8578D4C2171 /* MASCompositeConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASCompositeConstraint.h; path = Masonry/MASCompositeConstraint.h; sourceTree = "<group>"; };
+		7395726F99375AE9CBAD78C4E5B1A43E /* UINavigationBar+SwpNavigationBar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UINavigationBar+SwpNavigationBar.h"; path = "SwpCateGory/Class/UIKit/UINavigationBarCateGory/SwpNavigationBar/UINavigationBar+SwpNavigationBar.h"; sourceTree = "<group>"; };
+		7A73C7522FC2C3BA4DAD4864CABA5A82 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = SVProgressHUD.bundle; path = SVProgressHUD/SVProgressHUD.bundle; sourceTree = "<group>"; };
+		7B9E6999752CFF30573CC2C781BC60D3 /* UIBarButtonItem+SwpSetNavigationBarItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIBarButtonItem+SwpSetNavigationBarItem.h"; path = "SwpCateGory/Class/UIKit/UIBarButtonItemCateGory/SwpSetNavigationBarItem/UIBarButtonItem+SwpSetNavigationBarItem.h"; sourceTree = "<group>"; };
+		7E48131BDBA0A4346A0DC2A8EFC6A4BD /* SVProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SVProgressHUD-dummy.m"; sourceTree = "<group>"; };
+		7FA349E9D52C8F0FB05333B867CF69FF /* libSwpCateGory.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libSwpCateGory.a; path = libSwpCateGory.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		8264E6609A166BF1C9ACD7DCFC2E47E9 /* Pods-SwpBluetoothDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SwpBluetoothDemo-dummy.m"; sourceTree = "<group>"; };
-		82CCDFF73D0A36210CC3CDB1B4C9814D /* UIColor+SwpColor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIColor+SwpColor.m"; path = "SwpCateGory/Class/UIKit/UIColorCateGory/SwpColor/UIColor+SwpColor.m"; sourceTree = "<group>"; };
-		8CA7AEED5EA76A9A5595D838C39737A2 /* libMasonry.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libMasonry.a; path = libMasonry.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		847E4A0DF59123C4D29CD198FF734E73 /* libPods-SwpBluetoothDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-SwpBluetoothDemo.a"; path = "libPods-SwpBluetoothDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		854E624396F54730D2AEBFB417732190 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		8B3DB1DB806AC7BD238A518D9688D065 /* Masonry-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Masonry-dummy.m"; sourceTree = "<group>"; };
+		8DC41DB231D5764ABBF1C5A86641FE71 /* SVProgressHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SVProgressHUD.xcconfig; sourceTree = "<group>"; };
+		9119E89B6C41FF3E41BF0086E5D704AE /* MASConstraint+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MASConstraint+Private.h"; path = "Masonry/MASConstraint+Private.h"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		93C4DB2473E26C7B904DF1DD43968217 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		99D7469B8CEA98700977C3610ED11F92 /* Masonry-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Masonry-prefix.pch"; sourceTree = "<group>"; };
-		99F34D6431B7C900C850B72908A48E19 /* libPods-SwpBluetoothDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-SwpBluetoothDemo.a"; path = "libPods-SwpBluetoothDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9FC2DC1729252903DF2A0EB33A8F076D /* MASLayoutConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASLayoutConstraint.m; path = Masonry/MASLayoutConstraint.m; sourceTree = "<group>"; };
-		A06B8A5E42C23EC1EA828338C3D2EB87 /* SwpBluetoothBase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SwpBluetoothBase.m; sourceTree = "<group>"; };
-		A79A66A29CAC1DBB6B877EDE65893A0A /* UIButton+SwpSetButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIButton+SwpSetButton.m"; path = "SwpCateGory/Class/UIKit/UIButtonCateGory/SwpSetButton/UIButton+SwpSetButton.m"; sourceTree = "<group>"; };
-		A91E260A065A6A1B0E39583CFD3E4AF6 /* SwpCateGory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SwpCateGory.m; path = SwpCateGory/Class/SwpCateGory/SwpCateGory.m; sourceTree = "<group>"; };
-		ACF47CE99A04B335F7BBC3B09FBFC3B6 /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "ViewController+MASAdditions.m"; path = "Masonry/ViewController+MASAdditions.m"; sourceTree = "<group>"; };
-		AD16E4D4F7557381FA7228DCC36B59DE /* NSArray+MASShorthandAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+MASShorthandAdditions.h"; path = "Masonry/NSArray+MASShorthandAdditions.h"; sourceTree = "<group>"; };
-		AE09B0188A954070A91A332F30B2D7BD /* SwpCateGory-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwpCateGory-dummy.m"; sourceTree = "<group>"; };
-		B09F786E5C0E4CA5657D20E346A70BF8 /* MASUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASUtilities.h; path = Masonry/MASUtilities.h; sourceTree = "<group>"; };
-		B2C2F4872C9DB326E114601AA2EB2317 /* MASViewConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASViewConstraint.m; path = Masonry/MASViewConstraint.m; sourceTree = "<group>"; };
-		BA25D8FD1A03A3E2BFA83443794EF354 /* SwpBluetooth.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = SwpBluetooth.bundle; path = SwpBluetooth/Resources/SwpBluetooth.bundle; sourceTree = "<group>"; };
-		BB32E41F22C90CADB928CD9DDD8C27B9 /* NSData+SwpPrintText.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSData+SwpPrintText.h"; sourceTree = "<group>"; };
+		9558A08057A8D3D6E4C77112C4864AEC /* MASLayoutConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASLayoutConstraint.h; path = Masonry/MASLayoutConstraint.h; sourceTree = "<group>"; };
+		9664902890C11ADBFA43B882B5E65C65 /* SwpBluetoothModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SwpBluetoothModel.h; sourceTree = "<group>"; };
+		98222D2F7CA75D610B5B627680CE5355 /* SwpBluetoothDatas.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SwpBluetoothDatas.h; sourceTree = "<group>"; };
+		99D082AC2A147F2DD589E36C63E8AA3B /* SVProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-prefix.pch"; sourceTree = "<group>"; };
+		9B9CA19A4475648557F24801750EB297 /* View+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "View+MASAdditions.h"; path = "Masonry/View+MASAdditions.h"; sourceTree = "<group>"; };
+		9CC32462587089ACEED84263325EC5DB /* MASCompositeConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASCompositeConstraint.h; path = Masonry/MASCompositeConstraint.h; sourceTree = "<group>"; };
+		A069625BFF05DD5EFD0229CEE00CB4C5 /* NSArray+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+MASAdditions.m"; path = "Masonry/NSArray+MASAdditions.m"; sourceTree = "<group>"; };
+		A34E3B030248BBCE0DA346D3239B0AC3 /* NSArray+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+MASAdditions.h"; path = "Masonry/NSArray+MASAdditions.h"; sourceTree = "<group>"; };
+		A794F221FC99C2C060605F75653F667B /* MASCompositeConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASCompositeConstraint.m; path = Masonry/MASCompositeConstraint.m; sourceTree = "<group>"; };
+		B26B931092B9D4B9FBF82E3CB9DB06A6 /* MASViewAttribute.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASViewAttribute.h; path = Masonry/MASViewAttribute.h; sourceTree = "<group>"; };
+		B6C034E4418BEB58B7C723179F9D9468 /* SwpCateGory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SwpCateGory.m; path = SwpCateGory/Class/SwpCateGory/SwpCateGory.m; sourceTree = "<group>"; };
+		B7F54E2FD202FA507BD61CB611A7078C /* MASViewConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASViewConstraint.m; path = Masonry/MASViewConstraint.m; sourceTree = "<group>"; };
+		B84A1B9DE82547B5492D7B7F72C65CB7 /* SwpPrint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SwpPrint.m; sourceTree = "<group>"; };
+		BBF77CAF71CFB5E90F836727C924C9CB /* MASViewAttribute.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASViewAttribute.m; path = Masonry/MASViewAttribute.m; sourceTree = "<group>"; };
+		BD1025CCF3ED836429F685500CB9FF6F /* SVProgressAnimatedView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SVProgressAnimatedView.m; path = SVProgressHUD/SVProgressAnimatedView.m; sourceTree = "<group>"; };
 		C297D3C259AF3DBE10341A569EBCB902 /* Pods-SwpBluetoothDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwpBluetoothDemo.release.xcconfig"; sourceTree = "<group>"; };
-		C3099B980FE5C8FD214319C0EC079767 /* SwpBluetooth.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwpBluetooth.xcconfig; sourceTree = "<group>"; };
-		C3766DD8C76094101DE354D4F8970DCC /* MASViewConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASViewConstraint.h; path = Masonry/MASViewConstraint.h; sourceTree = "<group>"; };
-		C5FA850DC88C68CC38C0E9A1961B5B08 /* SwpBluetoothBase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SwpBluetoothBase.h; sourceTree = "<group>"; };
-		C9D593CEBF663E5031FA8DFC248340C4 /* SwpBluetoothUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SwpBluetoothUtils.h; sourceTree = "<group>"; };
-		CC052E60FD6E283B31596FBE4228039F /* SwpBluetoothHeader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SwpBluetoothHeader.h; sourceTree = "<group>"; };
-		CECED1D03120A7434E0F495ABB48CECE /* MASLayoutConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASLayoutConstraint.h; path = Masonry/MASLayoutConstraint.h; sourceTree = "<group>"; };
-		D058E084A0C56351173275198C5FDC6C /* UIBarButtonItem+SwpSetNavigationBarItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIBarButtonItem+SwpSetNavigationBarItem.m"; path = "SwpCateGory/Class/UIKit/UIBarButtonItemCateGory/SwpSetNavigationBarItem/UIBarButtonItem+SwpSetNavigationBarItem.m"; sourceTree = "<group>"; };
-		D27ABC854FD2F53670D654CEB275DD42 /* MASConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASConstraint.m; path = Masonry/MASConstraint.m; sourceTree = "<group>"; };
+		C4E2CF2FFB6C1B812B642691100A1FA7 /* libSVProgressHUD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libSVProgressHUD.a; path = libSVProgressHUD.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C78C02C8011CBA5B3F4BA7B68586829A /* NSArray+MASShorthandAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+MASShorthandAdditions.h"; path = "Masonry/NSArray+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		D1E18950A48AEACB46B86EAD09B2F607 /* SVRadialGradientLayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVRadialGradientLayer.h; path = SVProgressHUD/SVRadialGradientLayer.h; sourceTree = "<group>"; };
+		D1FCCB68800CA891BD143B694C48226F /* SwpCateGory.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwpCateGory.xcconfig; sourceTree = "<group>"; };
+		D281F5EAC039FA6EFD8EF93DF9D08282 /* SwpCateGory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SwpCateGory.h; path = SwpCateGory/Class/SwpCateGory/SwpCateGory.h; sourceTree = "<group>"; };
+		D41A00430D77948D0F015772A2CDC739 /* SVIndefiniteAnimatedView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SVIndefiniteAnimatedView.m; path = SVProgressHUD/SVIndefiniteAnimatedView.m; sourceTree = "<group>"; };
 		D451BC124D208E0A4150562FB2FADFE8 /* Pods-SwpBluetoothDemo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwpBluetoothDemo-frameworks.sh"; sourceTree = "<group>"; };
-		DEB9EC68D991CD38F5B7F7E60D0ACEA3 /* MASConstraint+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MASConstraint+Private.h"; path = "Masonry/MASConstraint+Private.h"; sourceTree = "<group>"; };
-		E046FC4293E31AB8B520129AEEFC781F /* UINavigationBar+SwpNavigationBar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UINavigationBar+SwpNavigationBar.h"; path = "SwpCateGory/Class/UIKit/UINavigationBarCateGory/SwpNavigationBar/UINavigationBar+SwpNavigationBar.h"; sourceTree = "<group>"; };
-		E2755919E702AFE1BE909E205FC423A4 /* MASCompositeConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASCompositeConstraint.m; path = Masonry/MASCompositeConstraint.m; sourceTree = "<group>"; };
-		E330163F5C122A7BE7EBF31CD58A990F /* MASViewAttribute.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASViewAttribute.m; path = Masonry/MASViewAttribute.m; sourceTree = "<group>"; };
-		E35DB80AA84BD84CE60D0696D8F8FB7B /* UIButton+SwpSetButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIButton+SwpSetButton.h"; path = "SwpCateGory/Class/UIKit/UIButtonCateGory/SwpSetButton/UIButton+SwpSetButton.h"; sourceTree = "<group>"; };
-		E3AFEEA5F5B6D874C811840002D20F71 /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "View+MASShorthandAdditions.h"; path = "Masonry/View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
-		E658E52185D8A1006AB6D89B8BF8BDA2 /* SwpBluetooth.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = SwpBluetooth.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		EA9EAB9B0B95ACDFAE8CF0D1DBE05BD7 /* SwpBluetoothUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SwpBluetoothUtils.m; sourceTree = "<group>"; };
-		EB9A296395EFA7213BEB3C825A5909EE /* NSData+SwpPrintText.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSData+SwpPrintText.m"; sourceTree = "<group>"; };
-		F1B858E49435FB36BED525DE6C4C5131 /* SwpCateGory.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = SwpCateGory.bundle; path = SwpCateGory/Resources/SwpCateGory.bundle; sourceTree = "<group>"; };
-		F3DD688F225F887CF8FDABCD96508330 /* SwpPrint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SwpPrint.m; sourceTree = "<group>"; };
-		F5D63A10E2BB3648D912D232DEF048FD /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
-		F6DAC4FFF14727CD2CB04E163992131C /* SwpBluetooth.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SwpBluetooth.h; sourceTree = "<group>"; };
+		D844BC44C9712C83493AA9B2E327E720 /* Masonry-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Masonry-prefix.pch"; sourceTree = "<group>"; };
+		D854C2E6B92CF3EB2E56DAE8CD2892AB /* SwpCateGory.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = SwpCateGory.bundle; path = SwpCateGory/Resources/SwpCateGory.bundle; sourceTree = "<group>"; };
+		D8FABCC305EFF4828538F286E13DCFB6 /* SwpBluetooth.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = SwpBluetooth.bundle; path = SwpBluetooth/Resources/SwpBluetooth.bundle; sourceTree = "<group>"; };
+		DC5EE168B79B3DEE291935A92F21715E /* MASConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASConstraint.m; path = Masonry/MASConstraint.m; sourceTree = "<group>"; };
+		DC753F083E275F10EAA088981DF311A7 /* UIBarButtonItem+SwpSetNavigationBarItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIBarButtonItem+SwpSetNavigationBarItem.m"; path = "SwpCateGory/Class/UIKit/UIBarButtonItemCateGory/SwpSetNavigationBarItem/UIBarButtonItem+SwpSetNavigationBarItem.m"; sourceTree = "<group>"; };
+		DDB6AD86EB47A8F92071F20A54B9BEB5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		E00CBD0EA4A6F1A4B48DED2681E3F9B9 /* SwpBluetoothHeader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SwpBluetoothHeader.h; sourceTree = "<group>"; };
+		E5D5269AA94B448AE88F15C7715BB796 /* SVProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SVProgressHUD.m; path = SVProgressHUD/SVProgressHUD.m; sourceTree = "<group>"; };
+		E8A4C34E621B2734604EFE2991442A75 /* Masonry.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Masonry.xcconfig; sourceTree = "<group>"; };
+		EDE330563E26FA1D4D695967BA1C2785 /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "ViewController+MASAdditions.m"; path = "Masonry/ViewController+MASAdditions.m"; sourceTree = "<group>"; };
+		F04A9A793831A71C7250263575B428D1 /* MASViewConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASViewConstraint.h; path = Masonry/MASViewConstraint.h; sourceTree = "<group>"; };
+		F20A638596EEB7D17723FAC253E6A31D /* View+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "View+MASAdditions.m"; path = "Masonry/View+MASAdditions.m"; sourceTree = "<group>"; };
+		FB55F66C1B648CDA0683FD19B8003275 /* SwpPrint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SwpPrint.h; sourceTree = "<group>"; };
+		FB9F3E0806E6347C3E11B6C32F0DF478 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		FBBE9ECB470F3321A2FCBC402F8C5B90 /* UINavigationBar+SwpNavigationBar.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UINavigationBar+SwpNavigationBar.m"; path = "SwpCateGory/Class/UIKit/UINavigationBarCateGory/SwpNavigationBar/UINavigationBar+SwpNavigationBar.m"; sourceTree = "<group>"; };
+		FBE7AB1B44FB06CA3282169F8DF5D0D6 /* SwpBluetooth.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SwpBluetooth.m; sourceTree = "<group>"; };
+		FF2C4EF562F1278297C47CCF8E0F8FF3 /* SVRadialGradientLayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SVRadialGradientLayer.m; path = SVProgressHUD/SVRadialGradientLayer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		391230D1329E9542F4D686325EBB9E5B /* Frameworks */ = {
+		137DA1E0A6CBCF01212FA30C674DE902 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3BFD7A4AAD0F1EAB5B039AC7213A9D0 /* Foundation.framework in Frameworks */,
+				907AA6FFF388C25882B5B92812F99CE3 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5764BBB4A7E4B847B5D4BA2EC5FD2789 /* Frameworks */ = {
+		1E7067DDEE23F1EA6AF576E4C3E4F352 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD06CA14CF42D6587BBC87FE6136EDCE /* Foundation.framework in Frameworks */,
-				747F4D4F951681635A5650057B2023B2 /* UIKit.framework in Frameworks */,
+				02F847305FE6C78188ADCDD415111BD2 /* Foundation.framework in Frameworks */,
+				68A064CE70E7C1FBA448A2CFF5FC2182 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,214 +234,203 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D6E18D5A31F8BF4E58569F1657D75CA6 /* Frameworks */ = {
+		70C2054AD8CC0E3C913342BF5BF7F7BE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E7DD9B77263C1D09B23CA8D857A70C52 /* CoreBluetooth.framework in Frameworks */,
-				C7080782344F843F1E2386465EF2A68A /* Foundation.framework in Frameworks */,
-				84BC3AED5572CCC9C4F69DD0484BE169 /* UIKit.framework in Frameworks */,
+				BDF48F9F5464B8DA9EEA695C14228100 /* Foundation.framework in Frameworks */,
+				04096DF694C978D3241630FF736725E9 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83D4DDF5C33982EEF5DDF3A43773C55C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				633B1EC207783F44144D0B20DFE21931 /* CoreBluetooth.framework in Frameworks */,
+				7FB1B7FB5F11EB58F8C2D567EE01486D /* Foundation.framework in Frameworks */,
+				5DD5E492B47366563D2BEB9DFABE44AB /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		122DA2E5084A4393C29BE363C764795C /* Frameworks */ = {
+		08DE2B7B500E1F588FD6A28C8FD7D4FB /* SwpBluetooth */ = {
 			isa = PBXGroup;
 			children = (
-				CD5FF2A6272614E8971C852B9277A4D0 /* iOS */,
+				130264151C5589B07113D094A670CF41 /* Main */,
+				79E69F48F8763D7925E7BA753AE32A35 /* Model */,
+				93C2B201C0D486F24B0C66C41F49A235 /* Other */,
+				176F910BD544D744F9B2059616FB0BA4 /* Pod */,
+				EBFBA458D926594322CE10198DCB729E /* Resources */,
+				8B9A10FDB3BDACCCFBEEBA6561A8B059 /* Support Files */,
 			);
-			name = Frameworks;
+			name = SwpBluetooth;
+			path = ../..;
 			sourceTree = "<group>";
 		};
-		1948DC38E795921CC83BE3B2AD042B72 /* Resources */ = {
+		130264151C5589B07113D094A670CF41 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				BA25D8FD1A03A3E2BFA83443794EF354 /* SwpBluetooth.bundle */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		24614B415624AC780AAE36E0F256233C /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				4D2B03CCAD63C51DFD85EC551B9FFDCA /* LICENSE */,
-				F5D63A10E2BB3648D912D232DEF048FD /* README.md */,
-				E658E52185D8A1006AB6D89B8BF8BDA2 /* SwpBluetooth.podspec */,
-			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
-		432698476C78F5D750EB37BE397B2DB9 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				1CB64F352C04A2C6818733F1B16856E4 /* SwpBluetoothModel.h */,
-				2EA75BCABB77C311E6F304B838157EFD /* SwpBluetoothModel.m */,
-			);
-			name = Model;
-			path = SwpBluetooth/Class/Model;
-			sourceTree = "<group>";
-		};
-		4E41F2AF76DD4BE6DE312E384906B3FE /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				8CA7AEED5EA76A9A5595D838C39737A2 /* libMasonry.a */,
-				99F34D6431B7C900C850B72908A48E19 /* libPods-SwpBluetoothDemo.a */,
-				0B69DC175E65FDF131BC5D44650CC532 /* libSwpBluetooth.a */,
-				6F14DD1DE8DF8305C1DF74C604E3C2F1 /* libSwpCateGory.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		4EC230753ED7644111A408804286326B /* Main */ = {
-			isa = PBXGroup;
-			children = (
-				BB32E41F22C90CADB928CD9DDD8C27B9 /* NSData+SwpPrintText.h */,
-				EB9A296395EFA7213BEB3C825A5909EE /* NSData+SwpPrintText.m */,
-				F6DAC4FFF14727CD2CB04E163992131C /* SwpBluetooth.h */,
-				75C5D3EE2B36298D38C7A7C1A52DB17A /* SwpBluetooth.m */,
-				C5FA850DC88C68CC38C0E9A1961B5B08 /* SwpBluetoothBase.h */,
-				A06B8A5E42C23EC1EA828338C3D2EB87 /* SwpBluetoothBase.m */,
-				242C356E7AEC4513115185ED630185C9 /* SwpBluetoothDatas.h */,
-				483951D4323F1F093475EE40100006F9 /* SwpPrint.h */,
-				F3DD688F225F887CF8FDABCD96508330 /* SwpPrint.m */,
+				3D153732685E514B42748C727141F83D /* SwpBluetooth.h */,
+				FBE7AB1B44FB06CA3282169F8DF5D0D6 /* SwpBluetooth.m */,
+				44C5782363DACC765382A7F146710712 /* SwpBluetoothBase.h */,
+				189D08C49FEF49D71196C4BB126D22A2 /* SwpBluetoothBase.m */,
+				98222D2F7CA75D610B5B627680CE5355 /* SwpBluetoothDatas.h */,
+				FB55F66C1B648CDA0683FD19B8003275 /* SwpPrint.h */,
+				B84A1B9DE82547B5492D7B7F72C65CB7 /* SwpPrint.m */,
 			);
 			name = Main;
 			path = SwpBluetooth/Class/Main;
 			sourceTree = "<group>";
 		};
-		4F0C2D1851446937405C22A0384F2F88 /* SwpColor */ = {
+		14B8B9B15ECBE87983FF987239AB2D7B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				58511D96880518288171BA05A8AF8869 /* UIColor+SwpColor.h */,
-				82CCDFF73D0A36210CC3CDB1B4C9814D /* UIColor+SwpColor.m */,
+				E831998AA732D9B42F52D34F20005F44 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		176F910BD544D744F9B2059616FB0BA4 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				08732A97F53C3A80771F8C19FF147352 /* LICENSE */,
+				854E624396F54730D2AEBFB417732190 /* README.md */,
+				293E87F6653C661ADBC024C9908CAB96 /* SwpBluetooth.podspec */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		17E60A09B3F0BE47D00108EBD5FF3852 /* SwpColor */ = {
+			isa = PBXGroup;
+			children = (
+				10EE401C770D44A11D5FAA6335907113 /* UIColor+SwpColor.h */,
+				051077876760AB99FCE4E53E1645798C /* UIColor+SwpColor.m */,
 			);
 			name = SwpColor;
 			sourceTree = "<group>";
 		};
-		5257C00639CBAADD9D3BAA5CCDF4114E /* Header */ = {
+		182696321046A143E7413CE51B3B1758 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				CC052E60FD6E283B31596FBE4228039F /* SwpBluetoothHeader.h */,
+				77B5A5F7F3D5DD64EACF7C49B0352E4A /* Masonry */,
+				D43D3431DD90A0B543A97682955C9980 /* SVProgressHUD */,
+				9FE78EB9DA3B6BECFD32B5B75016BCCE /* SwpCateGory */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		19D32A5D0F9D08C8E971640F56697F62 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4792809CE87F30F97B1A3EF5DFA3459D /* libMasonry.a */,
+				847E4A0DF59123C4D29CD198FF734E73 /* libPods-SwpBluetoothDemo.a */,
+				C4E2CF2FFB6C1B812B642691100A1FA7 /* libSVProgressHUD.a */,
+				24CDF915DAAC7E37C8774B3F7CDE35DB /* libSwpBluetooth.a */,
+				7FA349E9D52C8F0FB05333B867CF69FF /* libSwpCateGory.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2D018D6F4BF5A9E881F4AD1092E7AD38 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D854C2E6B92CF3EB2E56DAE8CD2892AB /* SwpCateGory.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		430BE3388EC1869A1EF239EA78DB3593 /* SwpCateGory */ = {
+			isa = PBXGroup;
+			children = (
+				D281F5EAC039FA6EFD8EF93DF9D08282 /* SwpCateGory.h */,
+				B6C034E4418BEB58B7C723179F9D9468 /* SwpCateGory.m */,
+				2D018D6F4BF5A9E881F4AD1092E7AD38 /* Resources */,
+			);
+			name = SwpCateGory;
+			sourceTree = "<group>";
+		};
+		4E8486A9E6DDA340C56952002BBD3B3B /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				8DC41DB231D5764ABBF1C5A86641FE71 /* SVProgressHUD.xcconfig */,
+				7E48131BDBA0A4346A0DC2A8EFC6A4BD /* SVProgressHUD-dummy.m */,
+				99D082AC2A147F2DD589E36C63E8AA3B /* SVProgressHUD-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SVProgressHUD";
+			sourceTree = "<group>";
+		};
+		54CD44B150ADD12763465A7203E6D54A /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				E00CBD0EA4A6F1A4B48DED2681E3F9B9 /* SwpBluetoothHeader.h */,
 			);
 			name = Header;
 			path = Header;
 			sourceTree = "<group>";
 		};
-		6358F0545EE5B733DF030997941AEFCE /* SwpCateGory */ = {
-			isa = PBXGroup;
-			children = (
-				38E78E661CD6D96B83EE2D55C2BD2487 /* SwpCateGory.h */,
-				A91E260A065A6A1B0E39583CFD3E4AF6 /* SwpCateGory.m */,
-				D60DF575DBF52D1011BA1D294973ED05 /* Resources */,
-			);
-			name = SwpCateGory;
-			sourceTree = "<group>";
-		};
 		6C53E4E81565CF7A9D694EDB106F164E /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				F9EDDF637DCF214B7271C73062F92DD0 /* SwpBluetooth */,
+				08DE2B7B500E1F588FD6A28C8FD7D4FB /* SwpBluetooth */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
 		};
-		6D1524CA95504580ADB5A09DE3B8510C /* Masonry */ = {
+		77B5A5F7F3D5DD64EACF7C49B0352E4A /* Masonry */ = {
 			isa = PBXGroup;
 			children = (
-				7FBF5D6B6FCD4FE6F095F8578D4C2171 /* MASCompositeConstraint.h */,
-				E2755919E702AFE1BE909E205FC423A4 /* MASCompositeConstraint.m */,
-				44C40AB82EA85E05D92D05EC51D75DF7 /* MASConstraint.h */,
-				D27ABC854FD2F53670D654CEB275DD42 /* MASConstraint.m */,
-				DEB9EC68D991CD38F5B7F7E60D0ACEA3 /* MASConstraint+Private.h */,
-				74D6EFB17498409435AEEFA9462C4414 /* MASConstraintMaker.h */,
-				0CD9C229B1F16AF707F14569727CCB09 /* MASConstraintMaker.m */,
-				CECED1D03120A7434E0F495ABB48CECE /* MASLayoutConstraint.h */,
-				9FC2DC1729252903DF2A0EB33A8F076D /* MASLayoutConstraint.m */,
-				1663BFD2520A327646482C7CF92DB178 /* Masonry.h */,
-				B09F786E5C0E4CA5657D20E346A70BF8 /* MASUtilities.h */,
-				4C0DADAA11BC89161AFBEDB2F7556D34 /* MASViewAttribute.h */,
-				E330163F5C122A7BE7EBF31CD58A990F /* MASViewAttribute.m */,
-				C3766DD8C76094101DE354D4F8970DCC /* MASViewConstraint.h */,
-				B2C2F4872C9DB326E114601AA2EB2317 /* MASViewConstraint.m */,
-				6D00363763FC81D7890BFC5A6D6C95D2 /* NSArray+MASAdditions.h */,
-				5A89CD02DD756E63027AD4FE2F75A9A4 /* NSArray+MASAdditions.m */,
-				AD16E4D4F7557381FA7228DCC36B59DE /* NSArray+MASShorthandAdditions.h */,
-				1C60A1D0FF91AB847A19DC7D3DE25397 /* NSLayoutConstraint+MASDebugAdditions.h */,
-				2B7107F34C7D505438D8E46045BD6727 /* NSLayoutConstraint+MASDebugAdditions.m */,
-				75FA726D28A89B0BEC0E472AC13199FD /* View+MASAdditions.h */,
-				2D9F1ABADF52A94FC97A24DF1F1F9FD6 /* View+MASAdditions.m */,
-				E3AFEEA5F5B6D874C811840002D20F71 /* View+MASShorthandAdditions.h */,
-				4BD4CD3528771FD6F66DCAAD6063EFA7 /* ViewController+MASAdditions.h */,
-				ACF47CE99A04B335F7BBC3B09FBFC3B6 /* ViewController+MASAdditions.m */,
-				E76DF4175549561B4ACAF3435C03B2BC /* Support Files */,
+				9CC32462587089ACEED84263325EC5DB /* MASCompositeConstraint.h */,
+				A794F221FC99C2C060605F75653F667B /* MASCompositeConstraint.m */,
+				0DE6E25FB3F72A4BA6FF2CAB5218DBE7 /* MASConstraint.h */,
+				DC5EE168B79B3DEE291935A92F21715E /* MASConstraint.m */,
+				9119E89B6C41FF3E41BF0086E5D704AE /* MASConstraint+Private.h */,
+				047AE7E9AAB6554B6848224FC4B17713 /* MASConstraintMaker.h */,
+				170481D8D94691815158AFCBCF362A73 /* MASConstraintMaker.m */,
+				9558A08057A8D3D6E4C77112C4864AEC /* MASLayoutConstraint.h */,
+				652F28B6E88E8ADB3B982F9E41A965E8 /* MASLayoutConstraint.m */,
+				1B2CF215A182C9A9468ABB67C555923B /* Masonry.h */,
+				30AF2B31D94CB92928F239C8C8924111 /* MASUtilities.h */,
+				B26B931092B9D4B9FBF82E3CB9DB06A6 /* MASViewAttribute.h */,
+				BBF77CAF71CFB5E90F836727C924C9CB /* MASViewAttribute.m */,
+				F04A9A793831A71C7250263575B428D1 /* MASViewConstraint.h */,
+				B7F54E2FD202FA507BD61CB611A7078C /* MASViewConstraint.m */,
+				A34E3B030248BBCE0DA346D3239B0AC3 /* NSArray+MASAdditions.h */,
+				A069625BFF05DD5EFD0229CEE00CB4C5 /* NSArray+MASAdditions.m */,
+				C78C02C8011CBA5B3F4BA7B68586829A /* NSArray+MASShorthandAdditions.h */,
+				09ACED46630D11818F5012614E79F16B /* NSLayoutConstraint+MASDebugAdditions.h */,
+				6DEA4EA9FF83B67643EC26EC1C18435E /* NSLayoutConstraint+MASDebugAdditions.m */,
+				9B9CA19A4475648557F24801750EB297 /* View+MASAdditions.h */,
+				F20A638596EEB7D17723FAC253E6A31D /* View+MASAdditions.m */,
+				1DC1C88CBE0B6DD35BB968D02EF6BC3B /* View+MASShorthandAdditions.h */,
+				29D11530C39730F535B532E217F20923 /* ViewController+MASAdditions.h */,
+				EDE330563E26FA1D4D695967BA1C2785 /* ViewController+MASAdditions.m */,
+				8FB6B3703634E2A810CD6C26C6D19017 /* Support Files */,
 			);
 			name = Masonry;
 			path = Masonry;
 			sourceTree = "<group>";
 		};
-		6E1E05B141A00985BEFC521F5E7F9636 /* Support Files */ = {
+		79E69F48F8763D7925E7BA753AE32A35 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				25A0669877826DF434106EBD719F6C61 /* SwpCateGory.xcconfig */,
-				AE09B0188A954070A91A332F30B2D7BD /* SwpCateGory-dummy.m */,
-				210D1E7B8F084E98D5CD1DD1D357EF28 /* SwpCateGory-prefix.pch */,
+				9664902890C11ADBFA43B882B5E65C65 /* SwpBluetoothModel.h */,
+				0C207A06A7D04ACB0347BBD5D9C01A58 /* SwpBluetoothModel.m */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/SwpCateGory";
+			name = Model;
+			path = SwpBluetooth/Class/Model;
 			sourceTree = "<group>";
 		};
-		6E4890086A8D0ADCFDA8243E4FC531BB /* SwpSetButton */ = {
+		7C123397222B555E80FB555598CBEB46 /* SwpNavigationBar */ = {
 			isa = PBXGroup;
 			children = (
-				E35DB80AA84BD84CE60D0696D8F8FB7B /* UIButton+SwpSetButton.h */,
-				A79A66A29CAC1DBB6B877EDE65893A0A /* UIButton+SwpSetButton.m */,
-			);
-			name = SwpSetButton;
-			sourceTree = "<group>";
-		};
-		78A88072A6BC8A04EF3E2C60DD98E534 /* SwpSetNavigationBarItem */ = {
-			isa = PBXGroup;
-			children = (
-				2D2B6C774D5D25161E241E5F17C132D3 /* UIBarButtonItem+SwpSetNavigationBarItem.h */,
-				D058E084A0C56351173275198C5FDC6C /* UIBarButtonItem+SwpSetNavigationBarItem.m */,
-			);
-			name = SwpSetNavigationBarItem;
-			sourceTree = "<group>";
-		};
-		79CDC2A8F4AF92FAE4C9649DEB4F6426 /* SwpNavigationBar */ = {
-			isa = PBXGroup;
-			children = (
-				E046FC4293E31AB8B520129AEEFC781F /* UINavigationBar+SwpNavigationBar.h */,
-				03665B2969537A6373EAB089C24F9115 /* UINavigationBar+SwpNavigationBar.m */,
+				7395726F99375AE9CBAD78C4E5B1A43E /* UINavigationBar+SwpNavigationBar.h */,
+				FBBE9ECB470F3321A2FCBC402F8C5B90 /* UINavigationBar+SwpNavigationBar.m */,
 			);
 			name = SwpNavigationBar;
-			sourceTree = "<group>";
-		};
-		7C306AB54A4AACB10A176751CBE824F9 /* SwpCateGory */ = {
-			isa = PBXGroup;
-			children = (
-				6E1E05B141A00985BEFC521F5E7F9636 /* Support Files */,
-				6358F0545EE5B733DF030997941AEFCE /* SwpCateGory */,
-				4F0C2D1851446937405C22A0384F2F88 /* SwpColor */,
-				79CDC2A8F4AF92FAE4C9649DEB4F6426 /* SwpNavigationBar */,
-				6E4890086A8D0ADCFDA8243E4FC531BB /* SwpSetButton */,
-				78A88072A6BC8A04EF3E2C60DD98E534 /* SwpSetNavigationBarItem */,
-			);
-			name = SwpCateGory;
-			path = SwpCateGory;
-			sourceTree = "<group>";
-		};
-		7C805E435F7E9EE28011399660C6CDEB /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				C3099B980FE5C8FD214319C0EC079767 /* SwpBluetooth.xcconfig */,
-				3DEB5157B66FBF7FB9A652061B29D2C0 /* SwpBluetooth-dummy.m */,
-				12AB948D37CB00D0674DA1774C05AA49 /* SwpBluetooth-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "SwpBluetoothDemo/Pods/Target Support Files/SwpBluetooth";
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -417,21 +438,81 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				6C53E4E81565CF7A9D694EDB106F164E /* Development Pods */,
-				122DA2E5084A4393C29BE363C764795C /* Frameworks */,
-				A524FA39544852C4473E48D5E73686B9 /* Pods */,
-				4E41F2AF76DD4BE6DE312E384906B3FE /* Products */,
+				14B8B9B15ECBE87983FF987239AB2D7B /* Frameworks */,
+				182696321046A143E7413CE51B3B1758 /* Pods */,
+				19D32A5D0F9D08C8E971640F56697F62 /* Products */,
 				9C43E9E0C71C4E5E146A6B9D7B407C55 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		954AB433C27619B4EDE65C07662A31AD /* Other */ = {
+		8A7BC82D8F141B16514D9DF886AABEDA /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				5257C00639CBAADD9D3BAA5CCDF4114E /* Header */,
-				C243D010EC3AA7495FCADF1D521B158B /* Utils */,
+				4468DDC01702DF5DB1BD99F4C803FE3C /* NSData+SwpPrintText.h */,
+				5C24DF95883C87F05B1AF89D3E97A3CB /* NSData+SwpPrintText.m */,
+			);
+			name = Category;
+			path = Category;
+			sourceTree = "<group>";
+		};
+		8B9A10FDB3BDACCCFBEEBA6561A8B059 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				628CE58BAB9507290AEC1E51E923D93C /* SwpBluetooth.xcconfig */,
+				034407DF3073E56A44F400CFF4AA2F04 /* SwpBluetooth-dummy.m */,
+				2BBBA2A8DFBBB396949302498B94CB73 /* SwpBluetooth-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "SwpBluetoothDemo/Pods/Target Support Files/SwpBluetooth";
+			sourceTree = "<group>";
+		};
+		8FB6B3703634E2A810CD6C26C6D19017 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E8A4C34E621B2734604EFE2991442A75 /* Masonry.xcconfig */,
+				8B3DB1DB806AC7BD238A518D9688D065 /* Masonry-dummy.m */,
+				D844BC44C9712C83493AA9B2E327E720 /* Masonry-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Masonry";
+			sourceTree = "<group>";
+		};
+		8FF75DF7E9C3B3968364DC867A65A82B /* SwpSetButton */ = {
+			isa = PBXGroup;
+			children = (
+				62232C020BECD3686057435372BADF72 /* UIButton+SwpSetButton.h */,
+				71B12CE09801D10F360490B57B2A7C04 /* UIButton+SwpSetButton.m */,
+			);
+			name = SwpSetButton;
+			sourceTree = "<group>";
+		};
+		9077B21A95BA7EF18D19C70AB6C3285F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7A73C7522FC2C3BA4DAD4864CABA5A82 /* SVProgressHUD.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		93C2B201C0D486F24B0C66C41F49A235 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				8A7BC82D8F141B16514D9DF886AABEDA /* Category */,
+				54CD44B150ADD12763465A7203E6D54A /* Header */,
+				9696AE11067791FD7B3C34066F1241EB /* Utils */,
 			);
 			name = Other;
 			path = SwpBluetooth/Class/Other;
+			sourceTree = "<group>";
+		};
+		9696AE11067791FD7B3C34066F1241EB /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				623050C275B17ECDA55BF0E75786275A /* SwpBluetoothUtils.h */,
+				05181044D2A988A5E6D62ECC5D794D67 /* SwpBluetoothUtils.m */,
+			);
+			name = Utils;
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		9C43E9E0C71C4E5E146A6B9D7B407C55 /* Targets Support Files */ = {
@@ -442,13 +523,29 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		A524FA39544852C4473E48D5E73686B9 /* Pods */ = {
+		9D8C6000F6502936808DAF6D80228A83 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				6D1524CA95504580ADB5A09DE3B8510C /* Masonry */,
-				7C306AB54A4AACB10A176751CBE824F9 /* SwpCateGory */,
+				D1FCCB68800CA891BD143B694C48226F /* SwpCateGory.xcconfig */,
+				30BA40A40846549F68414ABD2BE6A5C3 /* SwpCateGory-dummy.m */,
+				0AB6322C34DF603005F56272DAD7A8D7 /* SwpCateGory-prefix.pch */,
 			);
-			name = Pods;
+			name = "Support Files";
+			path = "../Target Support Files/SwpCateGory";
+			sourceTree = "<group>";
+		};
+		9FE78EB9DA3B6BECFD32B5B75016BCCE /* SwpCateGory */ = {
+			isa = PBXGroup;
+			children = (
+				9D8C6000F6502936808DAF6D80228A83 /* Support Files */,
+				430BE3388EC1869A1EF239EA78DB3593 /* SwpCateGory */,
+				17E60A09B3F0BE47D00108EBD5FF3852 /* SwpColor */,
+				7C123397222B555E80FB555598CBEB46 /* SwpNavigationBar */,
+				8FF75DF7E9C3B3968364DC867A65A82B /* SwpSetButton */,
+				C45D7629C560AEA852F3F82AB2FCCF47 /* SwpSetNavigationBarItem */,
+			);
+			name = SwpCateGory;
+			path = SwpCateGory;
 			sourceTree = "<group>";
 		};
 		AC940C17CA0100862F34BD075B8AE333 /* Pods-SwpBluetoothDemo */ = {
@@ -466,71 +563,90 @@
 			path = "Target Support Files/Pods-SwpBluetoothDemo";
 			sourceTree = "<group>";
 		};
-		C243D010EC3AA7495FCADF1D521B158B /* Utils */ = {
+		C45D7629C560AEA852F3F82AB2FCCF47 /* SwpSetNavigationBarItem */ = {
 			isa = PBXGroup;
 			children = (
-				C9D593CEBF663E5031FA8DFC248340C4 /* SwpBluetoothUtils.h */,
-				EA9EAB9B0B95ACDFAE8CF0D1DBE05BD7 /* SwpBluetoothUtils.m */,
+				7B9E6999752CFF30573CC2C781BC60D3 /* UIBarButtonItem+SwpSetNavigationBarItem.h */,
+				DC753F083E275F10EAA088981DF311A7 /* UIBarButtonItem+SwpSetNavigationBarItem.m */,
 			);
-			name = Utils;
-			path = Utils;
+			name = SwpSetNavigationBarItem;
 			sourceTree = "<group>";
 		};
-		CD5FF2A6272614E8971C852B9277A4D0 /* iOS */ = {
+		D43D3431DD90A0B543A97682955C9980 /* SVProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
-				5CD2BE03D5DF4F1A15D4B4E9B19EA1D5 /* CoreBluetooth.framework */,
-				5989C451E6E368AF1F3A30D5A91D420C /* Foundation.framework */,
-				93C4DB2473E26C7B904DF1DD43968217 /* UIKit.framework */,
+				5D33EB8758D599EDA77FA226E91D8269 /* SVIndefiniteAnimatedView.h */,
+				D41A00430D77948D0F015772A2CDC739 /* SVIndefiniteAnimatedView.m */,
+				2F911A039FAB1AC4841A77459582B761 /* SVProgressAnimatedView.h */,
+				BD1025CCF3ED836429F685500CB9FF6F /* SVProgressAnimatedView.m */,
+				350E43C1F5F23EC29D9EC3BD25B8C075 /* SVProgressHUD.h */,
+				E5D5269AA94B448AE88F15C7715BB796 /* SVProgressHUD.m */,
+				D1E18950A48AEACB46B86EAD09B2F607 /* SVRadialGradientLayer.h */,
+				FF2C4EF562F1278297C47CCF8E0F8FF3 /* SVRadialGradientLayer.m */,
+				9077B21A95BA7EF18D19C70AB6C3285F /* Resources */,
+				4E8486A9E6DDA340C56952002BBD3B3B /* Support Files */,
+			);
+			name = SVProgressHUD;
+			path = SVProgressHUD;
+			sourceTree = "<group>";
+		};
+		E831998AA732D9B42F52D34F20005F44 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				40C96533784058FDAFA921E2AAEA8CED /* CoreBluetooth.framework */,
+				5F2F95B1147AA40B0F0742A6EC7D332F /* Foundation.framework */,
+				FB9F3E0806E6347C3E11B6C32F0DF478 /* QuartzCore.framework */,
+				DDB6AD86EB47A8F92071F20A54B9BEB5 /* UIKit.framework */,
 			);
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		D60DF575DBF52D1011BA1D294973ED05 /* Resources */ = {
+		EBFBA458D926594322CE10198DCB729E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				F1B858E49435FB36BED525DE6C4C5131 /* SwpCateGory.bundle */,
+				D8FABCC305EFF4828538F286E13DCFB6 /* SwpBluetooth.bundle */,
 			);
 			name = Resources;
-			sourceTree = "<group>";
-		};
-		E76DF4175549561B4ACAF3435C03B2BC /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				37783D22CE386DEB4C9BF6BD33E3731F /* Masonry.xcconfig */,
-				544D44742C15792F9887FA16D3CCEBB0 /* Masonry-dummy.m */,
-				99D7469B8CEA98700977C3610ED11F92 /* Masonry-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Masonry";
-			sourceTree = "<group>";
-		};
-		F9EDDF637DCF214B7271C73062F92DD0 /* SwpBluetooth */ = {
-			isa = PBXGroup;
-			children = (
-				4EC230753ED7644111A408804286326B /* Main */,
-				432698476C78F5D750EB37BE397B2DB9 /* Model */,
-				954AB433C27619B4EDE65C07662A31AD /* Other */,
-				24614B415624AC780AAE36E0F256233C /* Pod */,
-				1948DC38E795921CC83BE3B2AD042B72 /* Resources */,
-				7C805E435F7E9EE28011399660C6CDEB /* Support Files */,
-			);
-			name = SwpBluetooth;
-			path = ../..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		8C8EE87EFFBEB6A0E967C270919B0D8B /* Headers */ = {
+		583D75272A1B9ADB68953179274E8CA0 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93FEF4D91D6C3B644204173C3F786BC8 /* SwpCateGory.h in Headers */,
-				E8032C65A4A110759066F1CD63B597C4 /* UIBarButtonItem+SwpSetNavigationBarItem.h in Headers */,
-				01141F43DAED2C285E214666DBE9A49E /* UIButton+SwpSetButton.h in Headers */,
-				993CCD0EAB95AFCD204092905A78E246 /* UIColor+SwpColor.h in Headers */,
-				5261F7EF1E7C50DF1AC1A7839D697AFA /* UINavigationBar+SwpNavigationBar.h in Headers */,
+				8BF41218EDFD77ADBBD238EDC4FBBEFD /* SVIndefiniteAnimatedView.h in Headers */,
+				310D2B6F8DA36B79D2FD44D184EDBFF0 /* SVProgressAnimatedView.h in Headers */,
+				4D4A5C864E81DC9FE1BA155465F22A91 /* SVProgressHUD.h in Headers */,
+				D62C6C453A285FE0DD0DE03B66AE578C /* SVRadialGradientLayer.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B6BA5B01EAB76CE3E40E53C3A0533ADF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB3C8D86C6A1B8A7521614B5537BB7D2 /* SwpCateGory.h in Headers */,
+				001A604959B9B276DCC32D692A87FE8A /* UIBarButtonItem+SwpSetNavigationBarItem.h in Headers */,
+				BB12D5744B4B0EA1B7631A99A335F42B /* UIButton+SwpSetButton.h in Headers */,
+				3F67F00C728867417547A3F36AFCD0C9 /* UIColor+SwpColor.h in Headers */,
+				D07ED4BCB72BCB17D1170609530D85FC /* UINavigationBar+SwpNavigationBar.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB365C8316DF3905EF7FD4AFEAE063F7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2CE9428F0EFBCF618157D9D935DD3B6 /* NSData+SwpPrintText.h in Headers */,
+				CBA06EA27B82A81E5DB6EB3E65DFDE69 /* SwpBluetooth.h in Headers */,
+				EFAC5B8D66377C443DB53602477B66EB /* SwpBluetoothBase.h in Headers */,
+				25A90C9C285E29B121B1920B7354494B /* SwpBluetoothDatas.h in Headers */,
+				834AD9576BB05BAC2AB54C8C4674EF4C /* SwpBluetoothHeader.h in Headers */,
+				9CF2E66637D79D4AE281AA08D93F8EA4 /* SwpBluetoothModel.h in Headers */,
+				8D9C51BCFECE3E0FE8BF7DE19A769ED8 /* SwpBluetoothUtils.h in Headers */,
+				8B0690D572AE0D724B2DA6DAAD209E5D /* SwpPrint.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -556,41 +672,78 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DE4F5C5B0076459948E3C82F01F130DC /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6405C7D90B76533D76A10ADF9BFC00FE /* NSData+SwpPrintText.h in Headers */,
-				A080B5D8CBCBB381C29C988D8051BC51 /* SwpBluetooth.h in Headers */,
-				8248D754E0E6513DEBC76CB64565FC32 /* SwpBluetoothBase.h in Headers */,
-				2BB5AB6C9BC5164D35494FE082644D48 /* SwpBluetoothDatas.h in Headers */,
-				D54699E2E53F43A1E28F22B3E45017D2 /* SwpBluetoothHeader.h in Headers */,
-				216614B60B373F44F6C13E76DF2BFAFB /* SwpBluetoothModel.h in Headers */,
-				ECA048443F87E2A21C8E0E8E1A3EA8AA /* SwpBluetoothUtils.h in Headers */,
-				EADEC21EDE56027D765CA82473C6DA37 /* SwpPrint.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		2F1D5BCEDAC836012C7065D80892C4B8 /* Pods-SwpBluetoothDemo */ = {
+		41303AA714EA487035EE7B2735631EDB /* SwpBluetooth */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 10FEED7E6F10BF8A36BB5DB652D50EB3 /* Build configuration list for PBXNativeTarget "Pods-SwpBluetoothDemo" */;
+			buildConfigurationList = D92F6B77565A12E797B6C8B55AB53CE2 /* Build configuration list for PBXNativeTarget "SwpBluetooth" */;
 			buildPhases = (
-				0AFD26BEBDEFBC1139DC9F0B5D861661 /* Sources */,
-				391230D1329E9542F4D686325EBB9E5B /* Frameworks */,
+				E06AAD4BCA6D7E2374D777236EA97CDC /* Sources */,
+				83D4DDF5C33982EEF5DDF3A43773C55C /* Frameworks */,
+				BB365C8316DF3905EF7FD4AFEAE063F7 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				9A5468FB1E421987164E244D86622FE5 /* PBXTargetDependency */,
-				00D6ABCA90F065046787A4B3DAFBA954 /* PBXTargetDependency */,
-				07ABBA8927C41FEE43C2C8868A06BB4D /* PBXTargetDependency */,
+			);
+			name = SwpBluetooth;
+			productName = SwpBluetooth;
+			productReference = 24CDF915DAAC7E37C8774B3F7CDE35DB /* libSwpBluetooth.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		49D56C745A0E5F923241F0C9D3E1B041 /* SwpCateGory */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 65AAB959A4DB86ED06157DA6E7EEFBA6 /* Build configuration list for PBXNativeTarget "SwpCateGory" */;
+			buildPhases = (
+				6CED2F9B2BDD25D9545D659E28D2823E /* Sources */,
+				70C2054AD8CC0E3C913342BF5BF7F7BE /* Frameworks */,
+				B6BA5B01EAB76CE3E40E53C3A0533ADF /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwpCateGory;
+			productName = SwpCateGory;
+			productReference = 7FA349E9D52C8F0FB05333B867CF69FF /* libSwpCateGory.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		5A92F798F7DE5F12C7F1117F922C2404 /* Pods-SwpBluetoothDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 675149E9FBD8BB948F8E4ECE48C1D72C /* Build configuration list for PBXNativeTarget "Pods-SwpBluetoothDemo" */;
+			buildPhases = (
+				14796B7952F74EC8F6C36258B683E187 /* Sources */,
+				137DA1E0A6CBCF01212FA30C674DE902 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C90AA9C0D04D4080757047F3F5EAC3AA /* PBXTargetDependency */,
+				C295920A193CA374C8095F78E691F0DC /* PBXTargetDependency */,
+				5B208AD487A7B21AA5B3479CEE49ACB8 /* PBXTargetDependency */,
+				C061408A31A0647D2ED1F19D1DFC11DA /* PBXTargetDependency */,
 			);
 			name = "Pods-SwpBluetoothDemo";
 			productName = "Pods-SwpBluetoothDemo";
-			productReference = 99F34D6431B7C900C850B72908A48E19 /* libPods-SwpBluetoothDemo.a */;
+			productReference = 847E4A0DF59123C4D29CD198FF734E73 /* libPods-SwpBluetoothDemo.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		95E5B4FD803DD42355693E09FF683BA2 /* SVProgressHUD */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CB3DFF8BADF91AED858CF8241B36988D /* Build configuration list for PBXNativeTarget "SVProgressHUD" */;
+			buildPhases = (
+				1E887EF02EA0599C1A0B5F57AA466637 /* Sources */,
+				1E7067DDEE23F1EA6AF576E4C3E4F352 /* Frameworks */,
+				583D75272A1B9ADB68953179274E8CA0 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SVProgressHUD;
+			productName = SVProgressHUD;
+			productReference = C4E2CF2FFB6C1B812B642691100A1FA7 /* libSVProgressHUD.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		9DC8D9E02903E93BD0B2FEC9D846EA20 /* Masonry */ = {
@@ -607,41 +760,7 @@
 			);
 			name = Masonry;
 			productName = Masonry;
-			productReference = 8CA7AEED5EA76A9A5595D838C39737A2 /* libMasonry.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		9F4D01A7D27876B96C0F4B8CF52F6AB8 /* SwpCateGory */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 933B40BEE5815643805C1A6C21AE1813 /* Build configuration list for PBXNativeTarget "SwpCateGory" */;
-			buildPhases = (
-				15891076A575F6214A7A9E10645A25EF /* Sources */,
-				5764BBB4A7E4B847B5D4BA2EC5FD2789 /* Frameworks */,
-				8C8EE87EFFBEB6A0E967C270919B0D8B /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = SwpCateGory;
-			productName = SwpCateGory;
-			productReference = 6F14DD1DE8DF8305C1DF74C604E3C2F1 /* libSwpCateGory.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		EB3429C17ECA038B74360F719EDE2FA1 /* SwpBluetooth */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = DE447AF42D0033B9836503AB66E74E8B /* Build configuration list for PBXNativeTarget "SwpBluetooth" */;
-			buildPhases = (
-				85F70E4C240C3D4652F98CE31D9443C7 /* Sources */,
-				D6E18D5A31F8BF4E58569F1657D75CA6 /* Frameworks */,
-				DE4F5C5B0076459948E3C82F01F130DC /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = SwpBluetooth;
-			productName = SwpBluetooth;
-			productReference = 0B69DC175E65FDF131BC5D44650CC532 /* libSwpBluetooth.a */;
+			productReference = 4792809CE87F30F97B1A3EF5DFA3459D /* libMasonry.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -661,51 +780,50 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 4E41F2AF76DD4BE6DE312E384906B3FE /* Products */;
+			productRefGroup = 19D32A5D0F9D08C8E971640F56697F62 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				9DC8D9E02903E93BD0B2FEC9D846EA20 /* Masonry */,
-				2F1D5BCEDAC836012C7065D80892C4B8 /* Pods-SwpBluetoothDemo */,
-				EB3429C17ECA038B74360F719EDE2FA1 /* SwpBluetooth */,
-				9F4D01A7D27876B96C0F4B8CF52F6AB8 /* SwpCateGory */,
+				5A92F798F7DE5F12C7F1117F922C2404 /* Pods-SwpBluetoothDemo */,
+				95E5B4FD803DD42355693E09FF683BA2 /* SVProgressHUD */,
+				41303AA714EA487035EE7B2735631EDB /* SwpBluetooth */,
+				49D56C745A0E5F923241F0C9D3E1B041 /* SwpCateGory */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		0AFD26BEBDEFBC1139DC9F0B5D861661 /* Sources */ = {
+		14796B7952F74EC8F6C36258B683E187 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2EA63C5668D1CDB687795590D3D5AF2 /* Pods-SwpBluetoothDemo-dummy.m in Sources */,
+				D924F010E85DCE40082719C3EB9EE042 /* Pods-SwpBluetoothDemo-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		15891076A575F6214A7A9E10645A25EF /* Sources */ = {
+		1E887EF02EA0599C1A0B5F57AA466637 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C3E769B9A834AF7F6F09480517527A3C /* SwpCateGory-dummy.m in Sources */,
-				90EBD1890FF6F2AD07AF720AFEFF361D /* SwpCateGory.m in Sources */,
-				8BCABEF7BF3A297129FEF2CD40F43635 /* UIBarButtonItem+SwpSetNavigationBarItem.m in Sources */,
-				A12D95324CD952D447D602DA9EDAD1EA /* UIButton+SwpSetButton.m in Sources */,
-				91DFD399F979F556B9C30BE2EC69B2DB /* UIColor+SwpColor.m in Sources */,
-				4A90AAFAF3843276C4C8AC18FEE01CC0 /* UINavigationBar+SwpNavigationBar.m in Sources */,
+				C2C738A53140DC074F4BD9D0DEAE101E /* SVIndefiniteAnimatedView.m in Sources */,
+				F6D57FC23BDA7AD5A339313329ACB720 /* SVProgressAnimatedView.m in Sources */,
+				EB16CB33D191E62E0EB3576BC6BD57C5 /* SVProgressHUD-dummy.m in Sources */,
+				4225C19F17D50FD09E2DB5BE253AA1E1 /* SVProgressHUD.m in Sources */,
+				D4AF48FDA6D5185ABFF6045784606CFF /* SVRadialGradientLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		85F70E4C240C3D4652F98CE31D9443C7 /* Sources */ = {
+		6CED2F9B2BDD25D9545D659E28D2823E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8140393AAC559A5D9DF8932AD1F73A78 /* NSData+SwpPrintText.m in Sources */,
-				16AA928187D7D994CF3249FDA5D5CBCF /* SwpBluetooth-dummy.m in Sources */,
-				C72F337FAC7068BE8BD6B478903C6273 /* SwpBluetooth.m in Sources */,
-				D79CBD2BB4676AE6D897C08C2E8F13C9 /* SwpBluetoothBase.m in Sources */,
-				4FBCD6A3DD9536F33C92A9813DAFDE52 /* SwpBluetoothModel.m in Sources */,
-				9C546A34F794C1F727DE14DD30579D93 /* SwpBluetoothUtils.m in Sources */,
-				CD36991E1BA4A5C47F3C244AA3444A00 /* SwpPrint.m in Sources */,
+				4C41B452B37235E48CEA9DE04886B55E /* SwpCateGory-dummy.m in Sources */,
+				381DEC36DF8A9B2C4B536150C1EFAF5F /* SwpCateGory.m in Sources */,
+				739EAAF72C1C54497624649066BF3EE5 /* UIBarButtonItem+SwpSetNavigationBarItem.m in Sources */,
+				B03CAF1F7869C42B583BA6904BAA9766 /* UIButton+SwpSetButton.m in Sources */,
+				5951F7B3FCCEFFA0DE9313A0C240B88E /* UIColor+SwpColor.m in Sources */,
+				9F79825F27DBC78C9FF398E6F0FC6EC9 /* UINavigationBar+SwpNavigationBar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -727,31 +845,51 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E06AAD4BCA6D7E2374D777236EA97CDC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DED377FBB1F04B88A06F78F47B10B4F /* NSData+SwpPrintText.m in Sources */,
+				74948B81DF0A387C5B3047376DBA1F5C /* SwpBluetooth-dummy.m in Sources */,
+				9A87C73F174B2DF79C48F3296833944A /* SwpBluetooth.m in Sources */,
+				B1DD074D99E2D00F7EF8EB6D059824D9 /* SwpBluetoothBase.m in Sources */,
+				67752DB3AFB2F145C1C00CE3610781BA /* SwpBluetoothModel.m in Sources */,
+				8916187FBB625C6CA514566D181BB770 /* SwpBluetoothUtils.m in Sources */,
+				EE04BDBDFAAE1424672C288A33CD63C3 /* SwpPrint.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		00D6ABCA90F065046787A4B3DAFBA954 /* PBXTargetDependency */ = {
+		5B208AD487A7B21AA5B3479CEE49ACB8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SwpBluetooth;
-			target = EB3429C17ECA038B74360F719EDE2FA1 /* SwpBluetooth */;
-			targetProxy = 5E06EEB2B2E135533FAE62BC742AC1E1 /* PBXContainerItemProxy */;
+			target = 41303AA714EA487035EE7B2735631EDB /* SwpBluetooth */;
+			targetProxy = 052397EB68DF8EC12A3087A5FA27C22A /* PBXContainerItemProxy */;
 		};
-		07ABBA8927C41FEE43C2C8868A06BB4D /* PBXTargetDependency */ = {
+		C061408A31A0647D2ED1F19D1DFC11DA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SwpCateGory;
-			target = 9F4D01A7D27876B96C0F4B8CF52F6AB8 /* SwpCateGory */;
-			targetProxy = B4D6E945DEAAB3507CC2759D8F4C8636 /* PBXContainerItemProxy */;
+			target = 49D56C745A0E5F923241F0C9D3E1B041 /* SwpCateGory */;
+			targetProxy = C2CDA8190812102D05E24D4ADD31BE3B /* PBXContainerItemProxy */;
 		};
-		9A5468FB1E421987164E244D86622FE5 /* PBXTargetDependency */ = {
+		C295920A193CA374C8095F78E691F0DC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SVProgressHUD;
+			target = 95E5B4FD803DD42355693E09FF683BA2 /* SVProgressHUD */;
+			targetProxy = 64AC205F8867CC8DB8FE23F4C17E6576 /* PBXContainerItemProxy */;
+		};
+		C90AA9C0D04D4080757047F3F5EAC3AA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Masonry;
 			target = 9DC8D9E02903E93BD0B2FEC9D846EA20 /* Masonry */;
-			targetProxy = 4B4D6275103291A48E5E373662D87824 /* PBXContainerItemProxy */;
+			targetProxy = BDB4D6F8E3B123FAC51C38F1AA454667 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		12D4BA271A8281F03778462170EE96A1 /* Release */ = {
+		050AB9408F9089B28B0A29256146CB16 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C297D3C259AF3DBE10341A569EBCB902 /* Pods-SwpBluetoothDemo.release.xcconfig */;
 			buildSettings = {
@@ -836,9 +974,32 @@
 			};
 			name = Debug;
 		};
-		4E47D547EF7A70D7A9476A9722E25211 /* Debug */ = {
+		1FCEC8F5650ECBCF9480D1BADABF1D8B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 25A0669877826DF434106EBD719F6C61 /* SwpCateGory.xcconfig */;
+			baseConfigurationReference = 628CE58BAB9507290AEC1E51E923D93C /* SwpBluetooth.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/SwpBluetooth/SwpBluetooth-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = SwpBluetooth;
+				PRODUCT_NAME = SwpBluetooth;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		55A6DFE4DC6CC7F06461D90BD8C4C773 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D1FCCB68800CA891BD143B694C48226F /* SwpCateGory.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -861,7 +1022,7 @@
 		};
 		6033A2127E806DD5C86A515742F7445E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 37783D22CE386DEB4C9BF6BD33E3731F /* Masonry.xcconfig */;
+			baseConfigurationReference = E8A4C34E621B2734604EFE2991442A75 /* Masonry.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -884,7 +1045,7 @@
 		};
 		6681B1A324732F8264BB932595DFA69B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 37783D22CE386DEB4C9BF6BD33E3731F /* Masonry.xcconfig */;
+			baseConfigurationReference = E8A4C34E621B2734604EFE2991442A75 /* Masonry.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -906,9 +1067,54 @@
 			};
 			name = Release;
 		};
-		7CC2724783FBE662497CDDD0018A4F72 /* Release */ = {
+		B32FDD192A83F66AF3E6084B83372DE0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 25A0669877826DF434106EBD719F6C61 /* SwpCateGory.xcconfig */;
+			baseConfigurationReference = 0DFEA925BCECB56219C9C310A5B1ABB0 /* Pods-SwpBluetoothDemo.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BAFA2E1E29B859F35940F49ED43B412E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 628CE58BAB9507290AEC1E51E923D93C /* SwpBluetooth.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/SwpBluetooth/SwpBluetooth-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = SwpBluetooth;
+				PRODUCT_NAME = SwpBluetooth;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BEFEA3FE7252A9B1AEF5CEC1AEB785AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D1FCCB68800CA891BD143B694C48226F /* SwpCateGory.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -930,42 +1136,21 @@
 			};
 			name = Release;
 		};
-		96BB981D66B40362F27771950418BC74 /* Debug */ = {
+		E722CC94C8FA6FE89D9901BF25F7F446 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0DFEA925BCECB56219C9C310A5B1ABB0 /* Pods-SwpBluetoothDemo.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MACH_O_TYPE = staticlib;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		AB2696A40C671F1FAEE4B20A5CE9BA37 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C3099B980FE5C8FD214319C0EC079767 /* SwpBluetooth.xcconfig */;
+			baseConfigurationReference = 8DC41DB231D5764ABBF1C5A86641FE71 /* SVProgressHUD.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/SwpBluetooth/SwpBluetooth-prefix.pch";
+				GCC_PREFIX_HEADER = "Target Support Files/SVProgressHUD/SVProgressHUD-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = SwpBluetooth;
-				PRODUCT_NAME = SwpBluetooth;
+				PRODUCT_MODULE_NAME = SVProgressHUD;
+				PRODUCT_NAME = SVProgressHUD;
 				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -974,21 +1159,21 @@
 			};
 			name = Debug;
 		};
-		F0F9F687D768313A47A3311B68BB5C26 /* Release */ = {
+		F18BC4592CF7F0F74536FFA231B021E4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C3099B980FE5C8FD214319C0EC079767 /* SwpBluetooth.xcconfig */;
+			baseConfigurationReference = 8DC41DB231D5764ABBF1C5A86641FE71 /* SVProgressHUD.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/SwpBluetooth/SwpBluetooth-prefix.pch";
+				GCC_PREFIX_HEADER = "Target Support Files/SVProgressHUD/SVProgressHUD-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = SwpBluetooth;
-				PRODUCT_NAME = SwpBluetooth;
+				PRODUCT_MODULE_NAME = SVProgressHUD;
+				PRODUCT_NAME = SVProgressHUD;
 				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -1059,15 +1244,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		10FEED7E6F10BF8A36BB5DB652D50EB3 /* Build configuration list for PBXNativeTarget "Pods-SwpBluetoothDemo" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				96BB981D66B40362F27771950418BC74 /* Debug */,
-				12D4BA271A8281F03778462170EE96A1 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1086,20 +1262,38 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		933B40BEE5815643805C1A6C21AE1813 /* Build configuration list for PBXNativeTarget "SwpCateGory" */ = {
+		65AAB959A4DB86ED06157DA6E7EEFBA6 /* Build configuration list for PBXNativeTarget "SwpCateGory" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4E47D547EF7A70D7A9476A9722E25211 /* Debug */,
-				7CC2724783FBE662497CDDD0018A4F72 /* Release */,
+				55A6DFE4DC6CC7F06461D90BD8C4C773 /* Debug */,
+				BEFEA3FE7252A9B1AEF5CEC1AEB785AB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DE447AF42D0033B9836503AB66E74E8B /* Build configuration list for PBXNativeTarget "SwpBluetooth" */ = {
+		675149E9FBD8BB948F8E4ECE48C1D72C /* Build configuration list for PBXNativeTarget "Pods-SwpBluetoothDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AB2696A40C671F1FAEE4B20A5CE9BA37 /* Debug */,
-				F0F9F687D768313A47A3311B68BB5C26 /* Release */,
+				B32FDD192A83F66AF3E6084B83372DE0 /* Debug */,
+				050AB9408F9089B28B0A29256146CB16 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CB3DFF8BADF91AED858CF8241B36988D /* Build configuration list for PBXNativeTarget "SVProgressHUD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E722CC94C8FA6FE89D9901BF25F7F446 /* Debug */,
+				F18BC4592CF7F0F74536FFA231B021E4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D92F6B77565A12E797B6C8B55AB53CE2 /* Build configuration list for PBXNativeTarget "SwpBluetooth" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1FCEC8F5650ECBCF9480D1BADABF1D8B /* Debug */,
+				BAFA2E1E29B859F35940F49ED43B412E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

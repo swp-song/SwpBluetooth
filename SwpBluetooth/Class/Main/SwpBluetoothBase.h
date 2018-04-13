@@ -16,11 +16,30 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  @author swp_song
  *
- *  @brief  sharedInstance   ( 单利方法, 快速初始化 )
+ *  @brief  swpBluetoothManager ( 单利方法, 快速初始化 )
  *
  *  @return SwpBluetoothBase
  */
-+ (instancetype)sharedInstance;
++ (instancetype)swpBluetoothManager;
+
+/**
+ *  @author swp_song
+ *
+ *  @brief  swpBluetoothInfo    ( SwpBluetooth 信息 )
+ *
+ *  @return NSDictionary
+ */
+- (NSDictionary *)swpBluetoothInfo;
+
+
+/**
+ *  @author swp_song
+ *
+ *  @brief  swpBluetoothVersion  ( SwpBluetooth 版本号 )
+ *
+ *  @return NSString
+ */
+- (NSString *)swpBluetoothVersion;
 
 
 @end

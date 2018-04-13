@@ -31,7 +31,7 @@
 /* ---------------------- Data Property  ---------------------- */
 /* 数据源 */
 @property (nonatomic, copy) NSArray *datas_;
-@property (nonatomic, copy) void(^clickCell)(SwpBluetoothListView *, NSIndexPath *);
+@property (nonatomic, copy) void(^clickCell)(SwpBluetoothListView *, NSIndexPath *, SwpBluetoothListModel *);
 /* ---------------------- Data Property  ---------------------- */
 @end
 
@@ -119,19 +119,8 @@
  */
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
  
-    if (self.clickCell) self.clickCell(self, indexPath);
+    if (self.clickCell) self.clickCell(self, indexPath, self.datas_[indexPath.row]);
 }
-
-
-
-- (SwpBluetoothListView * _Nonnull (^)(void (^)(SwpBluetoothListView * _Nonnull, NSIndexPath * _Nonnull)))swpBluetoothListViewClickCell {
-    
-    return ^(void(^clickCell)(SwpBluetoothListView *, NSIndexPath *)) {
-        self.clickCell = clickCell;
-        return self;
-    };
-}
-
 
 
 #pragma mark - Public Methods
@@ -149,10 +138,19 @@
     };
 }
 
-- (void)datas:(NSArray *)datas {
-    self.datas_ = datas;
-    [self reloadData];
+/**
+ *  @author swp_song
+ *
+ *  @brief  tableView:swpBluetoothListViewClickCell ( SwpBluetoothListView 回调方法，点击 cell 调用)
+ */
+- (SwpBluetoothListView * _Nonnull (^)(void (^ _Nonnull)(SwpBluetoothListView * _Nonnull, NSIndexPath * _Nonnull, SwpBluetoothListModel * _Nonnull)))swpBluetoothListViewClickCell {
+    
+    return ^(void(^clickCell)(SwpBluetoothListView *, NSIndexPath *, SwpBluetoothListModel *)) {
+        self.clickCell = clickCell;
+        return self;
+    };
 }
+
 
 /*
 // Only override drawRect: if you perform custom drawing.

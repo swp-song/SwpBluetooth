@@ -8,54 +8,76 @@
 
 #import "SwpBluetooth.h"
 
+/* ---------------------- Tool       ---------------------- */
 #import "SwpBluetoothUtils.h"
+/* ---------------------- Tool       ---------------------- */
+
+/* ---------------------- Model      ---------------------- */
 #import "SwpBluetoothModel.h"
+/* ---------------------- Model      ---------------------- */
 
 
+/** 分段打印默认 Data 长度 */
+NSInteger  const kSwpBluetoothWriteDataDefaultLength            = 120;
 
-NSInteger const kSwpBluetoothDefaultWriteDataDefaultLength = 146;
+/** 默认链接设备 Identifier Key */
+NSString * const kSwpBluetoothDefaultConnectionIdentifierKey    = @"kSwpBluetoothDefaultConnectionIdentifierKey";
+
 
 @interface SwpBluetooth () <CBCentralManagerDelegate, CBPeripheralDelegate>
 
-/* 中心管理器 */
-@property (nonatomic, strong) CBCentralManager                      *centralManager;
-/* 搜索到设备元数据  */
-@property (nonatomic, copy) NSArray<NSDictionary<NSString *, id> *> *metaDatas;
-/* 发现设备可写服务  */
-@property (nonatomic, copy) NSArray<NSDictionary<NSString *, id> *> *writeChatacters;
-/* 搜索到设备模型数据 */
-@property (nonatomic, copy) NSArray<SwpBluetoothModel *>            *modelDatas;
 
-/* SwpBluetooth 回调方法，设备扫描调用 */
-@property (nonatomic, copy) SwpBluetoothPeripheralScanning          peripheralScanning;
-/* SwpBluetooth 回调方法，设备连接成功调用 */
+/* ---------------------- CBCentralManager  ---------------------- */
+/** 中心管理器 */
+@property (nonatomic, strong) CBCentralManager                      *centralManager;
+/** 中心管理器 Options */
+@property (nonatomic, copy  ) NSDictionary<NSString *, id>          *centralManagerOptions;;
+/* ---------------------- CBCentralManager  ---------------------- */
+
+/* ---------------------- Data    Property  ---------------------- */
+/** 搜索到设备元数据  */
+@property (nonatomic, copy) NSArray<NSDictionary<NSString *, id> *> *metaDatas;
+/** 发现设备可写服务  */
+@property (nonatomic, copy) NSArray<NSDictionary<NSString *, id> *> *writeChatacters;
+/** 搜索到设备模型数据 */
+@property (nonatomic, copy) NSArray<SwpBluetoothModel *>            *modelDatas;
+/** 连接设备 Options  */
+@property (nonatomic, copy) NSDictionary<NSString *, id>            *peripheralConnectOptions;
+/* ---------------------- Data    Property  ---------------------- */
+
+
+/* ---------------------- Block   Property  ---------------------- */
+/** SwpBluetooth 回调方法，设备扫描调用 */
+@property (nonatomic, copy) SwpBluetoothPeripheralBeginScanning     peripheralBeginScanning;
+/**SwpBluetooth 回调方法，设备连接成功调用 */
 @property (nonatomic, copy) SwpBluetoothConnectPeripheralSuccess    peripheralConnectSuccess;
-/* SwpBluetooth 回调方法，接设备无法连，连接失败，调用 */
+
+/** SwpBluetooth 回调方法，接设备无法连，连接失败，调用 */
 @property (nonatomic, copy) SwpBluetoothConnectPeripheralFail       peripheralConnectFail;
-/* SwpBluetooth 回调方法，设备断开连接，调用 */
+/** SwpBluetooth 回调方法，设备断开连接，调用 */
 @property (nonatomic, copy) SwpBluetoothConnectPeripheralDisconnect peripheralDisconnect;
+/**SwpBluetooth 回调方法，设备写入信息完成，调用 */
+@property (nonatomic, copy) SwpBluetoothWriteDataCompletion         peripheralWriteDataCompletion;
+
+/** SwpBluetooth 回调方法，设备自动连接成功，调用 */
+@property (nonatomic, copy) SwpBluetoothConnectPeripheralSuccess    peripheralAutomaticlConnectSuccess;
+/* ---------------------- Block   Property  ---------------------- */
+
+/* ---------------------- Data    Property  ---------------------- */
+/// 比较打印次数，数据过长需要分段写，因此 - (void)peripheral:(CBPeripheral *)peripheral didWriteValueForCharacteristic:(CBCharacteristic *)characteristic error:(nullable NSError *)error 该方法会调用多次
+//  比较打印次数，和回调次数，两个相等，说明一次打印结束，完整洗完一次数据。
+/** 写入数据，次数 */
+@property (nonatomic, assign) NSInteger peripheralWriteDataCount;
+/** 写入完成，返回次数 */
+@property (nonatomic, assign) NSInteger peripheralWriteDataReturnCount;
+/** 是否开启自动连接 */
+@property (nonatomic, assign, getter = isPeripheralAutomaticlConnect) BOOL peripheralAutomaticlConnect;
+/* ---------------------- Data    Property  ---------------------- */
 
 
 @end
 
 @implementation SwpBluetooth
-
-
-/**
- *  @author swp_song
- *
- *  @brief  init    ( Override init )
- *
- *  @return SwpBluetooth
- */
-- (instancetype)init {
-    
-    if (self = [super init]) {
-        [self _dataInit];
-    }
-    
-    return self;
-}
 
 #pragma mark - CBCentral Manager Delegate Methods
 /**
@@ -66,6 +88,7 @@ NSInteger const kSwpBluetoothDefaultWriteDataDefaultLength = 146;
  *  @param  central central
  */
 - (void)centralManagerDidUpdateState:(CBCentralManager *)central {
+    
     
     switch (central.state) {
             
@@ -93,7 +116,8 @@ NSInteger const kSwpBluetoothDefaultWriteDataDefaultLength = 146;
              */
             //  设备开启，开始扫描设备
             NSLog(@"开启扫描");
-            [central scanForPeripheralsWithServices:nil options:nil];
+
+            [central scanForPeripheralsWithServices:nil options:self.centralManagerOptions];
             
             break;
         default:
@@ -120,14 +144,27 @@ NSInteger const kSwpBluetoothDefaultWriteDataDefaultLength = 146;
     if (!peripheral.name.length) return;
     
     NSLog(@"扫描中..");
-    _metaDatas  = [SwpBluetoothUtils swpBluetoothUtilsScanDataFiltering:_metaDatas central:central peripheral:peripheral advertisement:advertisementData RSSI:RSSI];
-    _modelDatas = [SwpBluetoothModel swpBluetoothWithDictionarys:_metaDatas];
-    if (self.peripheralScanning) self.peripheralScanning(_modelDatas, _metaDatas);
+    
+    //  数据处理
+    self.metaDatas  = [SwpBluetoothUtils swpBluetoothUtilsScanDataFiltering:self.metaDatas central:central peripheral:peripheral advertisement:advertisementData RSSI:RSSI];
+    self.modelDatas = [SwpBluetoothModel swpBluetoothWithDictionarys:self.metaDatas];
+    
+    
+    
+    if (self.peripheralBeginScanning) self.peripheralBeginScanning(self, self.modelDatas, self.metaDatas);
+    
+    
+    //  是否自动连接
+    if (!self.isPeripheralAutomaticlConnect) return;
+    
+    if ([peripheral.identifier.UUIDString isEqualToString:SwpBluetoothGetCache(kSwpBluetoothDefaultConnectionIdentifierKey)]) {
+        [self connectPeripheral:peripheral];
+    }
+
     
 }
 
 #pragma mark - CBPeripheral Delegate Methods
-
 
 /**
  *  @author swp_song
@@ -140,7 +177,7 @@ NSInteger const kSwpBluetoothDefaultWriteDataDefaultLength = 146;
  */
 - (void)centralManager:(CBCentralManager *)central didConnectPeripheral:(CBPeripheral *)peripheral {
  
-    [_centralManager stopScan];
+    [self.centralManager stopScan];
     
     _perpheral      = peripheral;
     _perpheralStage = SwpBluetoothPerpheralStageConnected;
@@ -151,11 +188,19 @@ NSInteger const kSwpBluetoothDefaultWriteDataDefaultLength = 146;
     //  发现服务
     [peripheral discoverServices:nil];
     
-    //
-    _metaDatas  = [SwpBluetoothUtils swpBluetoothUtilsUpdateDatas:_metaDatas];
-    _modelDatas = [SwpBluetoothModel swpBluetoothWithDictionarys:_metaDatas];
+    //  数据处理
+    self.metaDatas  = [SwpBluetoothUtils swpBluetoothUtilsUpdateDatas:self.metaDatas];
+    self.modelDatas = [SwpBluetoothModel swpBluetoothWithDictionarys:self.metaDatas];
     
-    if (self.peripheralConnectSuccess) self.peripheralConnectSuccess(peripheral, _modelDatas, _metaDatas);
+    //  缓存默认连接设备 identifier
+    SwpBluetoothSetCache(kSwpBluetoothDefaultConnectionIdentifierKey, peripheral.identifier.UUIDString);
+    
+    if (self.peripheralConnectSuccess) self.peripheralConnectSuccess(self, peripheral, self.modelDatas, self.metaDatas);
+    
+    //  是否自动连接
+    if (!self.isPeripheralAutomaticlConnect) return;
+    
+    if (self.peripheralAutomaticlConnectSuccess) self.peripheralAutomaticlConnectSuccess(self, peripheral, self.modelDatas, self.metaDatas);
 }
 
 
@@ -173,7 +218,7 @@ NSInteger const kSwpBluetoothDefaultWriteDataDefaultLength = 146;
 - (void)centralManager:(CBCentralManager *)central didFailToConnectPeripheral:(CBPeripheral *)peripheral error:(nullable NSError *)error {
     _perpheralStage = SwpBluetoothPerpheralStageConnected;
     NSLog(@"%@ 无法连接该设备", peripheral.name);
-    if (self.peripheralConnectFail) self.peripheralConnectFail(peripheral, error);
+    if (self.peripheralConnectFail) self.peripheralConnectFail(self, peripheral, error);
 }
 
 /**
@@ -189,9 +234,12 @@ NSInteger const kSwpBluetoothDefaultWriteDataDefaultLength = 146;
  */
 - (void)centralManager:(CBCentralManager *)central didDisconnectPeripheral:(CBPeripheral *)peripheral error:(nullable NSError *)error {
     _perpheralStage = SwpBluetoothPerpheralStageConnected;
-    NSLog(@"%@ 设备已断开连接", peripheral.name);
-    if (self.peripheralDisconnect) self.peripheralDisconnect(peripheral, error);
     
+    NSLog(@"%@ 设备已断开连接", peripheral.name);
+    
+    self.metaDatas  = [SwpBluetoothUtils swpBluetoothUtilsUpdateDatas:self.metaDatas];
+    self.modelDatas = [SwpBluetoothModel swpBluetoothWithDictionarys:self.metaDatas];
+    if (self.peripheralDisconnect) self.peripheralDisconnect(self, peripheral, self.modelDatas, self.metaDatas, error);
 }
 
 /**
@@ -280,8 +328,8 @@ NSInteger const kSwpBluetoothDefaultWriteDataDefaultLength = 146;
     }
     
     if (temp.count > 0) {
-        _perpheralStage  = SwpBluetoothPerpheralStageCharacteristics;
-        _writeChatacters = temp.copy;
+        _perpheralStage      = SwpBluetoothPerpheralStageCharacteristics;
+        self.writeChatacters = temp.copy;
     }
 }
 
@@ -298,27 +346,107 @@ NSInteger const kSwpBluetoothDefaultWriteDataDefaultLength = 146;
  */
 - (void)peripheral:(CBPeripheral *)peripheral didWriteValueForCharacteristic:(CBCharacteristic *)characteristic error:(nullable NSError *)error {
  
+    
+    self.peripheralWriteDataReturnCount++;
+    
+    if (self.peripheralWriteDataReturnCount != self.peripheralWriteDataCount) return;
+    
+    //  完整写完一次数据
     if (error) {
-        //        _printResult(NO,_connectedPerpheral,@"发送失败");
+        if (self.peripheralWriteDataCompletion) self.peripheralWriteDataCompletion(self, NO, peripheral, error, @"写入信息失败");
     } else {
-        //        _printResult(YES,_connectedPerpheral,@"已成功发送至蓝牙设备");
-        NSLog(@"123");
+        
+        if (self.peripheralWriteDataCompletion) self.peripheralWriteDataCompletion(self, YES, peripheral, nil, nil);
     }
+    
+    
 }
 
 #pragma mark - Private Methods
+
+
 /**
  *  @author swp_song
  *
- *  @brief  _dataInit   ( 数据初始化 )
+ *  @brief  SwpBluetoothSetCache    ( 缓存数据 )
+ *
+ *  @param  key     key
+ *
+ *  @param  value   value
+ *
+ *  @return bool
  */
-- (void)_dataInit {
-    _centralManager = [[CBCentralManager alloc] initWithDelegate:self queue:dispatch_get_main_queue()];
-    _metaDatas       = NSArray.new;
-    _modelDatas      = NSArray.new;
+FOUNDATION_STATIC_INLINE bool SwpBluetoothSetCache(NSString *key, id value) {
+    return [SwpBluetoothUtils swpBluetoothUtilsSetUserDefaults:value forKey:key];
+}
+
+/**
+ *  @author swp_song
+ *
+ *  @brief  SwpBluetoothGetCache    ( 取出缓存数据 )
+ *
+ *  @param  key key
+ *
+ *  @return id
+ */
+FOUNDATION_STATIC_INLINE id SwpBluetoothGetCache(NSString *key) {
+    return [SwpBluetoothUtils swpBluetoothUtilsGetUserDefaults:key];
+}
+
+
+/**
+ *  @author swp_song
+ *
+ *  @brief  SwpBluetoothRemoveCache ( 移除缓存数据 )
+ *
+ *  @param  key key
+ *
+ *  @return bool
+ */
+FOUNDATION_STATIC_INLINE bool SwpBluetoothRemoveCache(NSString *key) {
+    return [SwpBluetoothUtils swpBluetoothUtilsRemoveUserDefaults:key];
+}
+
+/**
+ *  @author swp_song
+ *
+ *  @brief  connectPeripheral:  ( 连接设备 )
+ *
+ *  @param  peripheral  peripheral
+ */
+- (void)connectPeripheral:(CBPeripheral *)peripheral {
+    
+    //  关闭之前的连接
+    if (_perpheral) {
+        [self cancelPeripheralConnection:_perpheral];
+    }
+    
+    //  重新连接
+    peripheral.delegate = self;
+    [self.centralManager connectPeripheral:peripheral options:self.peripheralConnectOptions];
+    
+}
+
+/**
+ *  @author swp_song
+ *
+ *  @brief  cancelPeripheralConnection: ( 取消设备连接 )
+ *
+ *  @param  peripheral  peripheral
+ */
+- (void)cancelPeripheralConnection:(CBPeripheral *)peripheral {
+    
+    if (!peripheral) return;
+    
+    //  移除默认连接缓存
+    SwpBluetoothRemoveCache(kSwpBluetoothDefaultConnectionIdentifierKey);
+    
+    //  断开连接
+    [self.centralManager cancelPeripheralConnection:peripheral];
     _writeChatacters = NSArray.new;
     _perpheral       = nil;
 }
+
 
 /**
  *  @author swp_song
@@ -334,19 +462,26 @@ NSInteger const kSwpBluetoothDefaultWriteDataDefaultLength = 146;
  *  @param  characteristic  characteristic
  *
  *  @param  type            type
+ *
+ *  @return NSInteger       返回一次数据，写入的次数
  */
-- (void)_writeValue:(NSData *)data peripheral:(CBPeripheral *)peripheral dataLength:(NSInteger)length characteristic:(CBCharacteristic *)characteristic type:(CBCharacteristicWriteType)type {
+- (NSInteger)_writeValue:(NSData *)data peripheral:(CBPeripheral *)peripheral dataLength:(NSInteger)length characteristic:(CBCharacteristic *)characteristic type:(CBCharacteristicWriteType)type {
     
     
+    NSInteger peripheralWriteDataCount = 0;
     
     if (length <= 0) {
         [peripheral writeValue:data forCharacteristic:characteristic type:type];
-        return;
+        peripheralWriteDataCount++;
+        return peripheralWriteDataCount;
     }
     
     if (data.length <= length) {
         
         [peripheral writeValue:data forCharacteristic:characteristic type:type];
+        peripheralWriteDataCount++;
+        
+        return peripheralWriteDataCount;
         
     } else {
         
@@ -355,13 +490,19 @@ NSInteger const kSwpBluetoothDefaultWriteDataDefaultLength = 146;
         for (index = 0; index < data.length - length; index += length) {
             NSData *tempData = [data subdataWithRange:NSMakeRange(index, length)];
             [peripheral writeValue:tempData forCharacteristic:characteristic type:type];
+            peripheralWriteDataCount++;
         }
         
         NSData *tempData = [data subdataWithRange:NSMakeRange(index, data.length - index)];
-        [peripheral writeValue:tempData forCharacteristic:characteristic type:type];
+        if (tempData) {
+            [peripheral writeValue:tempData forCharacteristic:characteristic type:type];
+            peripheralWriteDataCount++;
+        }
         
+        return peripheralWriteDataCount;
     }
     
+    return peripheralWriteDataCount;
 }
 
 
@@ -369,15 +510,14 @@ NSInteger const kSwpBluetoothDefaultWriteDataDefaultLength = 146;
 
 #pragma mark - Public Methods
 #pragma mark - SwpBluetooth 扫描设备
-
 /**
  *  @author swp_song
  *
- *  @brief  sharedInstanceInit  ( 单利 )
+ *  @brief  swpBluetoothManagerChain    ( 单利 )
  */
-+ (__kindof SwpBluetooth * _Nonnull (^)(void))sharedInstanceInit {
++ (__kindof SwpBluetooth * _Nonnull (^)(void))swpBluetoothManagerChain {
     return ^() {
-        return [self.class sharedInstance];
+        return [self.class swpBluetoothManager];
     };
 }
 
@@ -389,25 +529,24 @@ NSInteger const kSwpBluetoothDefaultWriteDataDefaultLength = 146;
 - (void)swpBluetoothStartScan {
     
     NSLog(@"开启扫描");
-    if (!_centralManager) {
-        [self _dataInit];
-    }
-    
+    self.metaDatas  = @[];
+    self.modelDatas = @[];
     if (@available(iOS 10.0, *)) {
-        if (_centralManager.state == CBManagerStatePoweredOn) {
+        if (self.centralManager.state == CBManagerStatePoweredOn) {
             //开启搜索
-            [_centralManager scanForPeripheralsWithServices:nil options:nil];
+            [self.centralManager scanForPeripheralsWithServices:nil options:self.centralManagerOptions];
             return;
         }
         
     } else {
         
-        if (_centralManager.state == CBCentralManagerStatePoweredOn) {
+        if (self.centralManager.state == CBCentralManagerStatePoweredOn) {
             //开启搜索
-            [_centralManager scanForPeripheralsWithServices:nil options:nil];
+            [self.centralManager scanForPeripheralsWithServices:nil options:self.centralManagerOptions];
             return;
         }
     }
+    
 }
 
 /**
@@ -429,7 +568,7 @@ NSInteger const kSwpBluetoothDefaultWriteDataDefaultLength = 146;
  *  @brief  swpBluetoothStopScan    ( SwpBluetooth 停止扫描 )
  */
 - (void)swpBluetoothStopScan {
-    [_centralManager stopScan];
+    [self.centralManager stopScan];
     NSLog(@"停止扫描");
 }
 
@@ -449,24 +588,25 @@ NSInteger const kSwpBluetoothDefaultWriteDataDefaultLength = 146;
 /**
  *  @author swp_song
  *
- *  @brief  swpBluetoothScanning:   ( SwpBluetooth， 回调方法，扫描设备调用 )
+ *  @brief  swpBluetoothPeripheralBeginScanning:    ( SwpBluetooth， 回调方法，扫描设备调用 )
  *
- *  @param  scanning scanning
+ *  @param  beginScanning   beginScanning
  */
-- (void)swpBluetoothScanning:(SwpBluetoothPeripheralScanning)scanning {
-    _peripheralScanning = scanning;
+- (void)swpBluetoothPeripheralBeginScanning:(SwpBluetoothPeripheralBeginScanning)beginScanning {
+    [self swpBluetoothStartScan];
+    _peripheralBeginScanning = beginScanning;
 }
 
 
 /**
  *  @author swp_song
  *
- *  @brief  swpBluetoothScanningChain   ( SwpBluetooth， 回调方法，扫描设备调用 )
+ *  @brief  swpBluetoothPeripheralBeginScanningChain    ( SwpBluetooth， 回调方法，扫描设备调用 )
  */
-- (SwpBluetooth * _Nonnull (^)(SwpBluetoothPeripheralScanning))swpBluetoothScanningChain {
+- (SwpBluetooth * _Nonnull (^)(SwpBluetoothPeripheralBeginScanning))swpBluetoothPeripheralBeginScanningChain {
     
-    return ^(SwpBluetoothPeripheralScanning scanning) {
-        [self swpBluetoothScanning:scanning];
+    return ^(SwpBluetoothPeripheralBeginScanning beginScanning) {
+        [self swpBluetoothPeripheralBeginScanning:beginScanning];
         return self;
     };
 }
@@ -483,14 +623,7 @@ NSInteger const kSwpBluetoothDefaultWriteDataDefaultLength = 146;
  *  @param  connectSuccess  connectSuccess
  */
 - (void)swpBluetoothConnectPeripheral:(CBPeripheral *)peripheral connectSuccess:(SwpBluetoothConnectPeripheralSuccess)connectSuccess {
- 
-    //  关闭之前的连接
-    if (_perpheral) {
-        [self swpBluetoothCancelPeripheralConnection:_perpheral];
-    }
-    
-    //  重新连接
-    [_centralManager connectPeripheral:peripheral options:nil];
+    [self connectPeripheral:peripheral];
     _peripheralConnectSuccess = connectSuccess;
 }
 
@@ -516,11 +649,7 @@ NSInteger const kSwpBluetoothDefaultWriteDataDefaultLength = 146;
  *  @param  peripheral  peripheral
  */
 - (void)swpBluetoothCancelPeripheralConnection:(CBPeripheral *)peripheral {
-    
-    if (!peripheral) return;
-    [_centralManager cancelPeripheralConnection:peripheral];
-    _writeChatacters = NSArray.new;
-    _perpheral       = nil;
+    [self cancelPeripheralConnection:peripheral];
 }
 
 /**
@@ -577,22 +706,147 @@ NSInteger const kSwpBluetoothDefaultWriteDataDefaultLength = 146;
  *  @brief  swpBluetoothPeripheralDisconnectChain   ( SwpBluetooth 回调方法，设备断开连接，调用 )
  */
 - (SwpBluetooth * _Nonnull (^)(SwpBluetoothConnectPeripheralDisconnect))swpBluetoothPeripheralDisconnectChain {
-    return ^(SwpBluetoothConnectPeripheralFail disconnect) {
+    return ^(SwpBluetoothConnectPeripheralDisconnect disconnect) {
         [self swpBluetoothPeripheralDisconnect:disconnect];
         return self;
     };
 }
 
+/**
+ *  @author swp_song
+ *
+ *  @brief  swpBluetoothPeripheralAutomaticlConnect:    ( SwpBluetooth 设置自动连接蓝牙 )
+ *
+ *  @param  automaticlConnect   automaticlConnect
+ */
+- (void)swpBluetoothPeripheralAutomaticlConnect:(SwpBluetoothConnectPeripheralSuccess)automaticlConnect {
+    self.peripheralAutomaticlConnect    = YES;
+    _peripheralAutomaticlConnectSuccess = automaticlConnect;
+}
 
-- (void)sendPrintData:(NSData *)data {
-    
-    NSDictionary *cachedData         = _writeChatacters.lastObject;
-    CBCharacteristic *characteristic = cachedData[@"character"];
-    CBCharacteristicWriteType type   = [cachedData[@"type"] integerValue];
-    [self _writeValue:data peripheral:_perpheral dataLength:kSwpBluetoothDefaultWriteDataDefaultLength characteristic:characteristic type:type];
+/**
+ *  @author swp_song
+ *
+ *  @brief  swpBluetoothPeripheralAutomaticlConnectChain  ( SwpBluetooth 设置自动连接蓝牙 )
+ */
+- (SwpBluetooth * _Nonnull (^)(SwpBluetoothConnectPeripheralSuccess))swpBluetoothPeripheralAutomaticlConnectChain {
+    return ^(SwpBluetoothConnectPeripheralSuccess automaticlConnect) {
+        [self swpBluetoothPeripheralAutomaticlConnect:automaticlConnect];
+        return self;
+    };
 }
 
 
+#pragma mark - SwpBluetooth 写入数据
+/**
+ *  @author swp_song
+ *
+ *  @brief  swpBluetoothPeripheralWriteData:    ( SwpBluetooth 设备写入数据 )
+ *
+ *  @param  data    data
+ */
+- (void)swpBluetoothPeripheralWriteData:(NSData *)data {
+   
+    if (!self.perpheral) {
+        NSLog(@"请链接打印机");
+        return;
+    }
+    
+    if (!self.writeChatacters.count) {
+        NSLog(@"请检查打印机是否连接成功，打印服务是否可用");
+        return;
+    }
+    
+    if (_perpheralStage != SwpBluetoothPerpheralStageCharacteristics) {
+        NSLog(@"打印机正在准备中...");
+        return;
+    }
+    
+    NSDictionary     *cachedData     = _writeChatacters.lastObject;
+    CBCharacteristic *characteristic = cachedData[@"character"];
+    CBCharacteristicWriteType type   = [cachedData[@"type"] integerValue];
+    
+    self.peripheralWriteDataCount        = 0;
+    self.peripheralWriteDataReturnCount  = 0;
+    self.peripheralWriteDataCount        = [self _writeValue:data peripheral:self.perpheral dataLength:kSwpBluetoothWriteDataDefaultLength characteristic:characteristic type:type];
+}
+
+/**
+ *  @author swp_song
+ *
+ *  @brief  swpBluetoothPeripheralWriteDataChain    ( SwpBluetooth 设备写入数据 )
+ */
+- (SwpBluetooth * _Nonnull (^)(NSData *))swpBluetoothPeripheralWriteDataChain {
+    return ^(NSData *data) {
+        [self swpBluetoothPeripheralWriteData:data];
+        return self;
+    };
+}
+
+
+/**
+ *  @author swp_song
+ *
+ *  @brief  swpBluetoothPeripheralWriteDataCompletion:  ( SwpBluetooth 回调方法，设备写入信息完成，调用 )
+ *
+ *  @param  writeDataCompletion writeDataCompletion
+ */
+- (void)swpBluetoothPeripheralWriteDataCompletion:(SwpBluetoothWriteDataCompletion)writeDataCompletion {
+    _peripheralWriteDataCompletion = writeDataCompletion;
+}
+
+/**
+ *  @author swp_song
+ *
+ *  @brief  swpBluetoothPeripheralWriteDataCompletionChain  ( SwpBluetooth 回调方法，设备写入信息完成，调用 )
+ */
+- (SwpBluetooth * _Nonnull (^)(SwpBluetoothWriteDataCompletion))swpBluetoothPeripheralWriteDataCompletionChain {
+
+    return ^(SwpBluetoothWriteDataCompletion writeDataCompletion) {
+        [self swpBluetoothPeripheralWriteDataCompletion:writeDataCompletion];
+        return self;
+    };
+}
+
+
+
+#pragma Data Init Methods
+- (CBCentralManager *)centralManager {
+    return !_centralManager ? _centralManager = ({
+        [[CBCentralManager alloc] initWithDelegate:self queue:dispatch_get_main_queue()];
+    }) : _centralManager;
+}
+
+- (NSDictionary<NSString *,id> *)centralManagerOptions {
+    
+    return !_centralManagerOptions ? _centralManagerOptions = ({
+        @{CBCentralManagerOptionShowPowerAlertKey : @(YES), CBCentralManagerScanOptionAllowDuplicatesKey : @(YES)};
+    }) : _centralManagerOptions;
+}
+
+- (NSArray<NSDictionary<NSString *,id> *> *)metaDatas {
+    return !_metaDatas ? _metaDatas = ({
+        NSArray.new;
+    }) : _metaDatas;
+}
+
+- (NSArray<NSDictionary<NSString *,id> *> *)writeChatacters {
+    return !_writeChatacters ? _writeChatacters = ({
+        NSArray.new;
+    }) : _writeChatacters;
+}
+
+- (NSArray<SwpBluetoothModel *> *)modelDatas {
+    return !_modelDatas ? _modelDatas = ({
+        NSArray.new;
+    }) : _modelDatas;
+}
+
+- (NSDictionary<NSString *,id> *)peripheralConnectOptions {
+    return !_peripheralConnectOptions ? _peripheralConnectOptions = ({
+        @{CBCentralManagerOptionShowPowerAlertKey : @(YES), CBConnectPeripheralOptionNotifyOnConnectionKey : @(YES), CBConnectPeripheralOptionNotifyOnDisconnectionKey : @(YES),CBConnectPeripheralOptionNotifyOnNotificationKey : @(YES)};
+    }) : _peripheralConnectOptions;
+}
 
 
 @end

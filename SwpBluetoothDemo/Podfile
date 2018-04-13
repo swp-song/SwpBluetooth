@@ -12,10 +12,12 @@ target 'SwpBluetoothDemo' do
   
   
   pod 'Masonry'
+  pod 'SVProgressHUD'              
   pod 'SwpCateGory/SwpColor'
   pod 'SwpCateGory/SwpSetButton'
   pod 'SwpCateGory/SwpNavigationBar'
   pod 'SwpCateGory/SwpSetNavigationBarItem'
+  
   
 
 end

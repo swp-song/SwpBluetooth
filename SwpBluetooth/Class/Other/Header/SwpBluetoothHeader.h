@@ -9,6 +9,7 @@
 #ifndef SwpBluetoothHeader_h
 #define SwpBluetoothHeader_h
 
+    #import "SwpPrint.h"
     #import "SwpBluetooth.h"
 
 #endif /* SwpBluetoothHeader_h */

@@ -53,7 +53,7 @@
     
     [self setData];
     
-    [self testSharedInstance];
+    [self testSwpBluetooth];
 }
 
 /**
@@ -65,6 +65,7 @@
  */
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+
 }
 
 /**
@@ -88,6 +89,7 @@
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     // Do any additional setup after loading the view.
+    [SVProgressHUD dismiss];
 }
 
 /**
@@ -171,12 +173,20 @@
     
 }
 
-- (void)testSharedInstance {
+
+/**
+ *  @author swp_song
+ *
+ *  @brief  testSwpBluetoothManager ( 设置控件的自动布局 )
+ */
+- (void)testSwpBluetooth {
+    
+    [SVProgressHUD dismiss];
     
     SwpBluetooth *b0     = [SwpBluetooth new];
     SwpBluetooth *b1     = [[SwpBluetooth alloc] init];
-    SwpBluetooth *b2     = [SwpBluetooth sharedInstance];
-    SwpBluetooth *b3     = SwpBluetooth.sharedInstanceInit();
+    SwpBluetooth *b2     = [SwpBluetooth swpBluetoothManager];
+    SwpBluetooth *b3     = SwpBluetooth.swpBluetoothManagerChain();
     SwpBluetooth *b4     = SwpBluetooth.new;
     SwpBluetooth *b5     = b0.copy;
     SwpBluetooth *b6     = b0.mutableCopy;
@@ -189,8 +199,10 @@
     SwpBluetooth *b13    = b4.copy;
     SwpBluetooth *b14    = b4.mutableCopy;
     
+    [SVProgressHUD showInfoWithStatus:[NSString stringWithFormat:@" 内存地址「 %p 」更多请查看控制台打印信息。", b0]];
     NSLog(@"b0 = %p, b1 = %p, b2 = %p, b3 = %p, b4 = %p, b5 = %p, b6 = %p, b7 = %p, b8 = %p, b9 = %p, b10 = %p, b11 = %p, b12 = %p, b13 = %p, b14 = %p ", b0, b1, b2, b3, b4, b5, b6, b7, b8, b9, b10, b11, b12, b13, b14);
     
+//    [SVProgressHUD showInfoWithStatus:[NSString stringWithFormat:@"b0 = %p, b1 = %p, b2 = %p, b3 = %p, b4 = %p, b5 = %p, b6 = %p, b7 = %p, b8 = %p, b9 = %p, b10 = %p, b11 = %p, b12 = %p, b13 = %p, b14 = %p ", b0, b1, b2, b3, b4, b5, b6, b7, b8, b9, b10, b11, b12, b13, b14]];
 }
 
 

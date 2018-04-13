@@ -45,5 +45,41 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (NSArray<NSDictionary *> *)swpBluetoothUtilsUpdateDatas:(NSArray<NSDictionary<NSString *, id> *> *)datas;
 
+/**
+ *  @author swp_song
+ *
+ *  @brief  swpBluetoothUtilsSetUserDefaults:   ( NSUserDefaults 存 )
+ *
+ *  @param  value   value
+ *
+ *  @param  key     key
+ *
+ *  @return BOOL
+ */
++ (BOOL)swpBluetoothUtilsSetUserDefaults:(id)value forKey:(NSString *)key;
+
+/**
+ *  @author swp_song
+ *
+ *  @brief  swpBluetoothUtilsGetUserDefaults:   ( NSUserDefaults 取 )
+ *
+ *  @param  key key
+ *
+ *  @return id
+ */
++ (id)swpBluetoothUtilsGetUserDefaults:(NSString *)key;
+
+/**
+ *  @author swp_song
+ *
+ *  @brief  swpBluetoothUtilsRemoveUserDefaults:    ( NSUserDefaults 移除 )
+ *
+ *  @param  key key
+ *
+ *  @return BOOL
+ */
++ (BOOL)swpBluetoothUtilsRemoveUserDefaults:(NSString *)key;
+
+
 @end
 NS_ASSUME_NONNULL_END

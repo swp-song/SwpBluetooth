@@ -64,12 +64,35 @@ static id _swpBluetoothBase;
 /**
  *  @author swp_song
  *
- *  @brief  sharedInstance   ( 单利方法, 快速初始化 )
+ *  @brief  swpBluetoothManager ( 单利方法, 快速初始化 )
  *
  *  @return SwpBluetoothBase
  */
-+ (instancetype)sharedInstance {
++ (instancetype)swpBluetoothManager {
     return [self new];
+}
+
+/**
+ *  @author swp_song
+ *
+ *  @brief  swpBluetoothInfo    ( SwpBluetooth 信息 )
+ *
+ *  @return NSDictionary
+ */
+- (NSDictionary *)swpBluetoothInfo {
+    return [NSDictionary dictionaryWithContentsOfFile:[NSBundle.mainBundle pathForResource:@"SwpBluetooth.bundle/SwpBluetooth.plist" ofType:nil]];
+}
+
+
+/**
+ *  @author swp_song
+ *
+ *  @brief  swpBluetoothVersion  ( SwpBluetooth 版本号 )
+ *
+ *  @return NSString
+ */
+- (NSString *)swpBluetoothVersion {
+    return self.swpBluetoothInfo[@"Version"];
 }
 
 @end

@@ -9,9 +9,8 @@
 #import "SwpBluetoothRootViewController.h"
 
 /* ---------------------- Tool       ---------------------- */
-#import <SwpBluetooth/SwpBluetoothHeader.h>
-#import <SwpBluetooth/SwpPrint.h>
 #import <SwpCateGory/UIColor+SwpColor.h>
+#import <SwpBluetooth/SwpBluetoothHeader.h>
 #import <SwpCateGory/UIButton+SwpSetButton.h>
 #import <SwpCateGory/UIBarButtonItem+SwpSetNavigationBarItem.h>
 /* ---------------------- Tool       ---------------------- */
@@ -156,7 +155,8 @@
  */
 - (void)setNavigationBar {
     [self navigationBarTitle:@"蓝牙Demo" textColor:nil titleFontSize:nil];
-    self.navigationItem.rightBarButtonItem = [UIBarButtonItem swpSetNavigationBarItemTitle:@"Jump" setFontColot:[UIColor blackColor] setFontSize:15 setTag:0 setLeftBarButtonItem:NO setAarget:self setAction:@selector(clickButtonItemEvent:)];
+    
+    self.navigationItem.rightBarButtonItem = [UIBarButtonItem swpSetNavigationBarItemTitle:@"Print" setFontColot:[UIColor blackColor] setFontSize:15 setTag:0 setLeftBarButtonItem:NO setAarget:self setAction:@selector(clickPrintButtonItemEvent:)];
 }
 
 /**
@@ -196,34 +196,112 @@
 }
 
 
+
+/**
+ *  @author swp_song
+ *
+ *  @brief  clickBluetoothListButtonEvent:  ( )
+ *
+ *  @param  button  button
+ */
 - (void)clickBluetoothListButtonEvent:(UIButton *)button {
     [self.navigationController pushViewController:SwpBluetoothListViewController.new animated:YES];
 }
 
 
+/**
+ *  @author swp_song
+ *
+ *  @brief  clickBluetoothMethodTestButtonButtonEvent:  (  )
+ *
+ *  @param  button  button
+ */
 - (void)clickBluetoothMethodTestButtonButtonEvent:(UIButton *)button {
     [self.navigationController pushViewController:SwpBluetoothMethodTestViewController.new animated:YES];
 }
 
-- (void)clickButtonItemEvent:(UIBarButtonItem *)buttonItem {
-    //    [self.navigationController pushViewController:SwpBluetoothTempViewController.new animated:YES];
+
+/**
+ *  @author swp_song
+ *
+ *  @brief  clickPrintButtonItemEvent:  ( 打印按钮绑定方法 )
+ *
+ *  @param  buttonItem  buttonItem
+ */
+- (void)clickPrintButtonItemEvent:(UIBarButtonItem *)buttonItem {
     
-    //    [sendPrintData]
     
-    if (SwpBluetooth.sharedInstanceInit().perpheralStage != SwpBluetoothPerpheralStageCharacteristics) {
-        //        [ProgressShow alertView:self.view Message:@"打印机正在准备中..." cb:nil];
-        
-        return;
-    }
-    NSString *pringString = [NSString stringWithFormat:@"设备链接成功设备链接成功设备链接成功设备链接成功设备链接成功设备链接成功设备链接成功设备链接成功设备链接成功设备链接成功设备链接成功设备链接成功设备链接"];
-    //    SwpPrint.initSwpPrint().swpPrintEndCustomText(pringString).swpPrinterData;
     
-    [SwpBluetooth.sharedInstanceInit() sendPrintData:SwpPrint.initSwpPrint().swpPrintEndCustomText(pringString).swpPrinterData];
-//    [self.swpBluetooth sendPrintData:SwpPrint.initSwpPrint().swpPrintEndCustomText(pringString).swpPrinterData];
+#if TARGET_IPHONE_SIMULATOR
+    [SVProgressHUD dismiss];
+    [SVProgressHUD showInfoWithStatus:@"请使用真机运行"];
+    
+#elif TARGET_OS_IPHONE
+    
+    [self swpBluetoothPrint];
+    
+#endif
+
 }
 
 
+/**
+ *  @author swp_song
+ *
+ *  @brief  swpBluetoothPrint   ( 排版打印 )
+ */
+- (void)swpBluetoothPrint {
+    
+    SwpPrint *swpPrint = SwpPrint.initSwpPrint();
+    //  头部排版
+    swpPrint.swpPrintSetTitle(SwpTextAlignmentCenter, @"SwpBluetoothDemo").swpPrintSeparateLinesStyle2();
+    swpPrint.swpPrintSetTitle(SwpTextAlignmentCenter, @"蓝牙打印Demo").swpPrintSeparateLinesStyle2();
+    swpPrint.swpPrintSetTextStyle(SwpTextAlignmentCenter, SwpFontSizeMiddle, @"商家名称").swpPrintSeparateLinesStyle1();
+    swpPrint.swpPrintSetText(SwpTextAlignmentLeft, @"订单编号：1234567890");
+    swpPrint.swpPrintSetText(SwpTextAlignmentLeft, @"送达时间：2018-04-13 17:44:22").swpPrintSeparateLinesStyle1();
+    
+    //  菜品排版
+    swpPrint.swpPrintSet3LinesText(@"商品名称", @"数量", @"价格").swpPrintSeparateLinesStyle1();
+    swpPrint.swpPrintSet3LinesText(@"鱼香肉丝", @"x1", @"20");
+    swpPrint.swpPrintSet3LinesText(@"松鼠桂鱼", @"x1", @"50");
+    swpPrint.swpPrintSet3LinesText(@"地三鲜", @"x1", @"30");
+    swpPrint.swpPrintSet3LinesText(@"番茄炒蛋", @"x1", @"15");
+    
+    swpPrint.swpPrintSeparateLinesStyle1();
+    
+    //  包装费
+    swpPrint.swpPrintSet2LinesTextOffset(270, @"包装费", @"￥10");
+    //  配送费
+    swpPrint.swpPrintSet2LinesTextOffset(270, @"配送费", @"￥5");
+    //  优惠
+    swpPrint.swpPrintSet2LinesTextOffset(270, @"优惠", @"￥10");
+    
+    swpPrint.swpPrintSeparateLinesStyle1();
+    //  订单总金额
+    swpPrint.swpPrintSetTextStyle(SwpTextAlignmentRight, SwpFontSizeMin, @"原价：￥130");
+    //  实付款金额
+    swpPrint.swpPrintSetTextStyle(SwpTextAlignmentRight, SwpFontSizeMiddle, @"实付款：￥120");
+    swpPrint.swpPrintSeparateLinesStyle1();
+    
+    //  用户数据排版
+    swpPrint.swpPrintSetTextStyle(SwpTextAlignmentLeft, SwpFontSizeMiddle, @"备注：送到十栋与九栋之间，靠十栋那边二楼倒数第五个空调机有绳子放下来吊。如此大胆的取餐方式，也是没谁了，问题是，外卖小哥不知道能不能找到这根绳子......（这个备注是网上找的！）");
+    swpPrint.swpPrintSeparateLinesStyle1();
+    swpPrint.swpPrintSetTextStyle(SwpTextAlignmentLeft, SwpFontSizeMiddle, @"姓名：swp-song");
+    swpPrint.swpPrintSetTextStyle(SwpTextAlignmentLeft, SwpFontSizeMiddle, @"地址：中国北京市丰台区西客站南路华源三里1号楼");
+    swpPrint.swpPrintSetTextStyle(SwpTextAlignmentLeft, SwpFontSizeMiddle, @"电话：13000009999");
+    swpPrint.swpPrintEndDefaultText();
+    
+    
+    SwpBluetooth.swpBluetoothManagerChain()
+    .swpBluetoothPeripheralWriteDataChain(swpPrint.swpPrinterData.copy)
+    .swpBluetoothPeripheralWriteDataCompletionChain(^(SwpBluetooth *swpBluetooth, BOOL completion, CBPeripheral * _Nonnull perpheral, NSError * _Nullable error, NSString * _Nullable errorMessage){
+        [SVProgressHUD showInfoWithStatus:[NSString stringWithFormat:@"「 %@ 」「 %@ 」", perpheral.name, completion ? @"写入成功" : @"写入失败"]];
+    });
+    
+}
 
+
+#pragma mark - Init UI Methods
 - (UIButton *)bluetoothListButton {
     return !_bluetoothListButton ? _bluetoothListButton = ({
         [UIButton buttonWithType:UIButtonTypeCustom];

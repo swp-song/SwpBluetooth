@@ -147,7 +147,8 @@
  *  @brief  setNavigationBar    ( 设置导航栏 )
  */
 - (void)setNavigationBar {
-//    [self setNavigationBarTitle:@"模板" setTextColor:nil setTitleFontSize:nil];
+    
+    [self navigationBarTitle:@"SwpBluetoothTempV" textColor:nil titleFontSize:nil];
 }
 
 /**

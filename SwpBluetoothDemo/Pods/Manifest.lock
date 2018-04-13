@@ -1,5 +1,6 @@
 PODS:
   - Masonry (1.1.0)
+  - SVProgressHUD (2.2.5)
   - SwpBluetooth (1.0.0)
   - SwpCateGory/SwpCateGory (2.6.3)
   - SwpCateGory/SwpColor (2.6.3):
@@ -13,6 +14,7 @@ PODS:
 
 DEPENDENCIES:
   - Masonry
+  - SVProgressHUD
   - SwpBluetooth (from `../`)
   - SwpCateGory/SwpColor
   - SwpCateGory/SwpNavigationBar
@@ -22,6 +24,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - Masonry
+    - SVProgressHUD
     - SwpCateGory
 
 EXTERNAL SOURCES:
@@ -30,9 +33,10 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
-  SwpBluetooth: 51a55fe45af7aa155f58279525eeb833375c3330
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  SwpBluetooth: 882729aef52c54df5a3ec01aa7997f08c92c435a
   SwpCateGory: b27df2cd4f2169de51af7a241d0bff38290df67b
 
-PODFILE CHECKSUM: 6c1ce0ae155e564e07bc4b8fb04f1bae841a54a0
+PODFILE CHECKSUM: 6eeb5a34b2011408d1125767c56c7f883078006c
 
 COCOAPODS: 1.5.0

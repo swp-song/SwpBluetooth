@@ -11,7 +11,11 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-FOUNDATION_EXPORT NSInteger const kSwpBluetoothDefaultWriteDataParagraphLength;
+/** 分段打印默认 Data 长度 */
+FOUNDATION_EXPORT NSInteger const kSwpBluetoothWriteDataDefaultLength;
+
+/** 默认链接设备 Identifier Key */
+FOUNDATION_EXPORT NSString * const kSwpBluetoothDefaultConnectionIdentifierKey;
 
 @interface SwpBluetooth : SwpBluetoothBase
 
@@ -24,10 +28,9 @@ FOUNDATION_EXPORT NSInteger const kSwpBluetoothDefaultWriteDataParagraphLength;
 /**
  *  @author swp_song
  *
- *  @brief  sharedInstanceInit  ( 单利 )
+ *  @brief  swpBluetoothManagerChain  ( 单利 )
  */
-+ (__kindof SwpBluetooth * _Nonnull (^)(void))sharedInstanceInit;
-
++ (__kindof SwpBluetooth * _Nonnull (^)(void))swpBluetoothManagerChain;
 
 #pragma mark - SwpBluetooth 扫描设备
 /**
@@ -61,19 +64,18 @@ FOUNDATION_EXPORT NSInteger const kSwpBluetoothDefaultWriteDataParagraphLength;
 /**
  *  @author swp_song
  *
- *  @brief  swpBluetoothScanning:   ( SwpBluetooth， 回调方法，扫描设备调用 )
+ *  @brief  swpBluetoothPeripheralBeginScanning:    ( SwpBluetooth， 回调方法，扫描设备调用 )
  *
- *  @param  scanning scanning
+ *  @param  beginScanning   beginScanning
  */
-- (void)swpBluetoothScanning:(SwpBluetoothPeripheralScanning _Nullable)scanning;
-
+- (void)swpBluetoothPeripheralBeginScanning:(SwpBluetoothPeripheralBeginScanning)beginScanning;
 
 /**
  *  @author swp_song
  *
- *  @brief  swpBluetoothScanningChain   ( SwpBluetooth， 回调方法，扫描设备调用 )
+ *  @brief  swpBluetoothPeripheralBeginScanningChain    ( SwpBluetooth， 回调方法，扫描设备调用 )
  */
-- (SwpBluetooth * _Nonnull (^)(SwpBluetoothPeripheralScanning _Nullable))swpBluetoothScanningChain;
+- (SwpBluetooth * _Nonnull (^)(SwpBluetoothPeripheralBeginScanning))swpBluetoothPeripheralBeginScanningChain;
 
 
 #pragma mark - SwpBluetooth 设备连接，断开
@@ -143,10 +145,54 @@ FOUNDATION_EXPORT NSInteger const kSwpBluetoothDefaultWriteDataParagraphLength;
  */
 - (SwpBluetooth * _Nonnull (^)(SwpBluetoothConnectPeripheralDisconnect _Nullable))swpBluetoothPeripheralDisconnectChain;
 
+/**
+ *  @author swp_song
+ *
+ *  @brief  swpBluetoothPeripheralAutomaticlConnect:    ( SwpBluetooth 设置自动连接蓝牙 )
+ *
+ *  @param  automaticlConnect   automaticlConnect
+ */
+- (void)swpBluetoothPeripheralAutomaticlConnect:(SwpBluetoothConnectPeripheralSuccess _Nullable)automaticlConnect;
+
+/**
+ *  @author swp_song
+ *
+ *  @brief  swpBluetoothPeripheralAutomaticlConnectChain  ( SwpBluetooth 设置自动连接蓝牙 )
+ */
+- (SwpBluetooth * _Nonnull (^)(SwpBluetoothConnectPeripheralSuccess _Nullable))swpBluetoothPeripheralAutomaticlConnectChain;
 
 #pragma mark - SwpBluetooth 写入数据
-- (void)sendPrintData:(NSData *)data;
+/**
+ *  @author swp_song
+ *
+ *  @brief  swpBluetoothPeripheralWriteData:    ( SwpBluetooth 设备写入数据 )
+ *
+ *  @param  data    data
+ */
+- (void)swpBluetoothPeripheralWriteData:(NSData *)data;
 
+/**
+ *  @author swp_song
+ *
+ *  @brief  swpBluetoothPeripheralWriteDataChain    ( SwpBluetooth 设备写入数据 )
+ */
+- (SwpBluetooth * _Nonnull (^)(NSData *))swpBluetoothPeripheralWriteDataChain;
+
+/**
+ *  @author swp_song
+ *
+ *  @brief  swpBluetoothPeripheralWriteDataCompletion:  ( SwpBluetooth 回调方法，设备写入信息完成，调用 )
+ *
+ *  @param  writeDataCompletion writeDataCompletion
+ */
+- (void)swpBluetoothPeripheralWriteDataCompletion:(SwpBluetoothWriteDataCompletion _Nullable)writeDataCompletion;
+
+/**
+ *  @author swp_song
+ *
+ *  @brief  swpBluetoothPeripheralWriteDataCompletionChain  ( SwpBluetooth 回调方法，设备写入信息完成，调用 )
+ */
+- (SwpBluetooth * _Nonnull (^)(SwpBluetoothWriteDataCompletion _Nullable))swpBluetoothPeripheralWriteDataCompletionChain;
 
 
 @end

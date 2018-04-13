@@ -1,8 +1,8 @@
 {
   "name": "SwpBluetooth",
   "version": "1.0.0",
-  "summary": "蓝牙工具",
-  "description": "TODO: 蓝牙工具",
+  "summary": "蓝牙工具，驱动打印机打印数据。",
+  "description": "TODO: 蓝牙工具，驱动打印机打印数据。",
   "homepage": "https://github.com/swp-song/SwpBluetooth",
   "license": {
     "type": "MIT",

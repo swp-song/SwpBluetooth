@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+@class SwpBluetoothListModel;
 NS_ASSUME_NONNULL_BEGIN
 @interface SwpBluetoothListView : UITableView
 
@@ -18,11 +19,12 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (SwpBluetoothListView * _Nonnull (^)(NSArray * _Nonnull))datas;
 
-- (SwpBluetoothListView * _Nonnull (^)(void (^ _Nullable)(SwpBluetoothListView * _Nonnull, NSIndexPath * _Nonnull)))swpBluetoothListViewClickCell;
-
-
-- (void)datas:(NSArray *)datas;
-
+/**
+ *  @author swp_song
+ *
+ *  @brief  tableView:swpBluetoothListViewClickCell ( SwpBluetoothListView 回调方法，点击 cell 调用)
+ */
+- (SwpBluetoothListView * _Nonnull (^)(void (^ _Nonnull)(SwpBluetoothListView * _Nonnull, NSIndexPath * _Nonnull, SwpBluetoothListModel * _Nonnull)))swpBluetoothListViewClickCell;
 
 @end
 NS_ASSUME_NONNULL_END

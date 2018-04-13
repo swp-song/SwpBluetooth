@@ -10,7 +10,6 @@
 
 /* ---------------------- Tool       ---------------------- */
 #import <SwpBluetooth/SwpBluetoothHeader.h>
-#import <SwpBluetooth/SwpPrint.h>
 #import <SwpCateGory/UIBarButtonItem+SwpSetNavigationBarItem.h>
 /* ---------------------- Tool       ---------------------- */
 
@@ -36,8 +35,8 @@
 
 #pragma mark - Data Propertys
 /* ---------------------- Data Property  ---------------------- */
-@property (nonatomic, copy  ) NSArray *datas_;
-@property (nonatomic, strong) SwpBluetooth *swpBluetooth;
+@property (nonatomic, copy  ) NSArray       *datas_;
+@property (nonatomic, copy  ) CBPeripheral  *peripheral;
 /* ---------------------- Data Property  ---------------------- */
 
 
@@ -56,36 +55,27 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    
+#if TARGET_IPHONE_SIMULATOR
+    
+    [SVProgressHUD showInfoWithStatus:@"请使用真机运行"];
+    
+#elif TARGET_OS_IPHONE
+    
     [self setUI];
     
     [self setData];
     
-
+    [self swpBluetoothInit];
+    
     __weak __typeof(self)weakSelf = self;
-    self.swpBluetooth = SwpBluetooth
-    .sharedInstanceInit();
-    
-    self.swpBluetooth =
-    SwpBluetooth
-    .sharedInstanceInit()
-    .swpBluetoothScanningChain(^(NSArray<SwpBluetoothModel *> *models, NSArray<NSDictionary<NSString *,id> *> *datas){
+    self.swpBluetoothListView.swpBluetoothListViewClickCell(^(SwpBluetoothListView *swpBluetoothListView, NSIndexPath *indexPath, SwpBluetoothListModel *model){
         __strong __typeof(weakSelf)strongSelf = weakSelf;
-        if (!strongSelf) return;
-        strongSelf.datas_ = [SwpBluetoothListModel swpBluetoothListWithDictionarys:datas];
-        strongSelf.swpBluetoothListView.datas(strongSelf.datas_);
-    })
-    .swpBluetoothPeripheralDisconnectChain(^(CBPeripheral *perpheral, NSError *error){
-        
+        [strongSelf swpBluetoothConnect:model];
     });
     
-    
-    
-    self.swpBluetoothListView.swpBluetoothListViewClickCell(^(SwpBluetoothListView *swpBluetoothListView, NSIndexPath *indexPath){
-        __strong __typeof(weakSelf)strongSelf = weakSelf;
-        [strongSelf swpBluetoothConnect:strongSelf.swpBluetooth model:strongSelf.datas_[indexPath.row]];
-    });
-    
-    
+#endif
+  
     
 }
 
@@ -98,6 +88,19 @@
  */
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+
+    __weak __typeof(self)weakSelf = self;
+    // 自动连接设备回调
+    SwpBluetooth
+    .swpBluetoothManagerChain()
+    .swpBluetoothPeripheralAutomaticlConnectChain(^(SwpBluetooth * _Nonnull swpBluetooth, CBPeripheral * _Nonnull perpheral, NSArray<SwpBluetoothModel *> * _Nonnull models, NSArray<NSDictionary<NSString *,id> *> * _Nonnull metaDatas){
+        __strong __typeof(weakSelf)strongSelf = weakSelf;
+        if (!strongSelf) return;
+        [SVProgressHUD showInfoWithStatus:[NSString stringWithFormat:@"「 %@ 」「 连接成功 」", perpheral.name]];
+        strongSelf.peripheral = perpheral;
+
+        [strongSelf swpBluetoothListViewDataRefresh:metaDatas];
+    });
 }
 
 /**
@@ -109,8 +112,6 @@
  */
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    
-    self.swpBluetooth.swpBluetoothStartScanChain();
 }
 
 /**
@@ -123,6 +124,7 @@
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     // Do any additional setup after loading the view.
+    [SVProgressHUD dismiss];
 }
 
 /**
@@ -134,7 +136,7 @@
  */
 - (void)viewDidDisappear:(BOOL)animated {
     [super viewDidDisappear:animated];
-    self.swpBluetooth.swpBluetoothStopScanChain();
+    SwpBluetooth.swpBluetoothManagerChain().swpBluetoothStopScanChain();
 }
 
 /**
@@ -189,7 +191,12 @@
     
     [self navigationBarTitle:@"蓝牙列表" textColor:nil titleFontSize:nil];
     
-    self.navigationItem.rightBarButtonItem = [UIBarButtonItem swpSetNavigationBarItemTitle:@"Jump" setFontColot:[UIColor blackColor] setFontSize:15 setTag:0 setLeftBarButtonItem:NO setAarget:self setAction:@selector(clickButtonItemEvent:)];
+    UIBarButtonItem *jumpButtonItem = [UIBarButtonItem swpSetNavigationBarItemTitle:@"Jump" setFontColot:[UIColor blackColor] setFontSize:15 setTag:0 setLeftBarButtonItem:NO setAarget:self setAction:@selector(clickJumpButtonItemEvent:)];
+    
+    UIBarButtonItem *printButtonItem = [UIBarButtonItem swpSetNavigationBarItemTitle:@"Print" setFontColot:[UIColor blackColor] setFontSize:15 setTag:0 setLeftBarButtonItem:NO setAarget:self setAction:@selector(clickPrintButtonItemEvent:)];
+    
+    self.navigationItem.rightBarButtonItems = @[jumpButtonItem, printButtonItem];
+    
 }
 
 /**
@@ -215,41 +222,111 @@
 }
 
 
-- (void)clickButtonItemEvent:(UIBarButtonItem *)buttonItem {
-//    [self.navigationController pushViewController:SwpBluetoothTempViewController.new animated:YES];
-    
-//    [sendPrintData]
-    
-    if (self.swpBluetooth.perpheralStage != SwpBluetoothPerpheralStageCharacteristics) {
-//        [ProgressShow alertView:self.view Message:@"打印机正在准备中..." cb:nil];
-        
-        return;
-    }
-    NSString *pringString = [NSString stringWithFormat:@"设备链接成功设备链接成功设备链接成功设备链接成功设备链接成功设备链接成功设备链接成功设备链接成功设备链接成功设备链接成功设备链接成功设备链接成功设备链接"];
-//    SwpPrint.initSwpPrint().swpPrintEndCustomText(pringString).swpPrinterData;
-    [self.swpBluetooth sendPrintData:SwpPrint.initSwpPrint().swpPrintEndCustomText(pringString).swpPrinterData];
+/**
+ *  @author swp_song
+ *
+ *  @brief  clickJumpButtonItemEvent:   ( 跳转按钮绑定方法 )
+ *
+ *  @param  buttonItem  buttonItem
+ */
+- (void)clickJumpButtonItemEvent:(UIBarButtonItem *)buttonItem {
+    [self.navigationController pushViewController:SwpBluetoothTempViewController.new animated:YES];
 }
 
-- (void)swpBluetoothConnect:(SwpBluetooth *)swpBluetooth model:(SwpBluetoothListModel *)model {
 
+/**
+ *  @author swp_song
+ *
+ *  @brief  clickPrintButtonItemEvent:  ( 打印按钮绑定方法 )
+ *
+ *  @param  buttonItem  buttonItem
+ */
+- (void)clickPrintButtonItemEvent:(UIBarButtonItem *)buttonItem {
+    NSString *pringString = [NSString stringWithFormat:@"[ %@ ] 「 已连接 」", self.peripheral.name];
+    SwpBluetooth.swpBluetoothManagerChain().swpBluetoothPeripheralWriteDataChain(SwpPrint.initSwpPrint().swpPrintEndCustomText(pringString).swpPrinterData);
+}
+
+
+
+/**
+ *  @author swp_song
+ *
+ *  @brief  swpBluetoothInit:   ( SwpBluetooth 设置 )
+ */
+- (void)swpBluetoothInit {
+    
     __weak __typeof(self)weakSelf = self;
     
-//    [swpBluetooth swpBluetoothConnectPeripheral:model.peripheral connectSuccess:^(CBPeripheral * _Nonnull perpheral, NSArray<SwpBluetoothModel *> * _Nonnull models, NSArray<NSDictionary<NSString *,id> *> * _Nonnull datas) {
-//
-//        __strong __typeof(weakSelf)strongSelf = weakSelf;
-//        strongSelf.datas_ = [SwpBluetoothListModel swpBluetoothListWithDictionarys:datas];
-//        strongSelf.swpBluetoothListView.datas(strongSelf.datas_);
-//    }];
-    
-    swpBluetooth.swpBluetoothConnectPeripheralChain(model.peripheral, ^(CBPeripheral * _Nonnull perpheral, NSArray<SwpBluetoothModel *> * _Nonnull models, NSArray<NSDictionary<NSString *,id> *> * _Nonnull datas){
+    SwpBluetooth
+    //  初始化
+    .swpBluetoothManagerChain()
+    //  扫描设备
+    .swpBluetoothPeripheralBeginScanningChain(^(SwpBluetooth * _Nonnull swpBluetooth, NSArray<SwpBluetoothModel *> * _Nonnull models, NSArray<NSDictionary<NSString *,id> *> * _Nonnull metaDatas) {
         __strong __typeof(weakSelf)strongSelf = weakSelf;
-        strongSelf.datas_ = [SwpBluetoothListModel swpBluetoothListWithDictionarys:datas];
-        strongSelf.swpBluetoothListView.datas(strongSelf.datas_);
+        if (!strongSelf) return;
+        [strongSelf swpBluetoothListViewDataRefresh:metaDatas];
+    })
+    //  设备断开链接回调
+    .swpBluetoothPeripheralDisconnectChain(^(SwpBluetooth * _Nonnull swpBluetooth, CBPeripheral * _Nonnull perpheral, NSArray<SwpBluetoothModel *> * _Nonnull models, NSArray<NSDictionary<NSString *,id> *> * _Nonnull metaDatas, NSError * _Nonnull error) {
+        __strong __typeof(weakSelf)strongSelf = weakSelf;
+        if (!strongSelf) return;
+        [strongSelf swpBluetoothListViewDataRefresh:metaDatas];
+        [SVProgressHUD showInfoWithStatus:[NSString stringWithFormat:@"「 %@ 」「 断开连接 」", perpheral.name]];
+    })
+    //  无法链接设备回调
+    .swpBluetoothConnectPeripheralFailChain(^(SwpBluetooth * _Nonnull swpBluetooth, CBPeripheral * _Nonnull perpheral, NSError * _Nonnull error){
+        
+    })
+    
+    //  设备写入数据
+    .swpBluetoothPeripheralWriteDataCompletionChain(^(SwpBluetooth *swpBluetooth, BOOL completion, CBPeripheral * _Nonnull perpheral, NSError * _Nullable error, NSString * _Nullable errorMessage){
+        [SVProgressHUD showInfoWithStatus:[NSString stringWithFormat:@"「 %@ 」「 %@ 」", perpheral.name, completion ? @"写入成功" : @"写入失败"]];
     });
 }
 
 
+/**
+ *  @author swp_song
+ *
+ *  @brief  swpBluetoothConnect:    ( 连接蓝牙方法 )
+ *
+ *  @param  model   model
+ */
+- (void)swpBluetoothConnect:(SwpBluetoothListModel *)model {
 
+    __weak __typeof(self)weakSelf = self;
+    
+    SwpBluetooth
+    .swpBluetoothManagerChain()
+    //  连接设备，成功回调
+    .swpBluetoothConnectPeripheralChain(model.peripheral, ^(SwpBluetooth *swpBluetooth, CBPeripheral * _Nonnull perpheral, NSArray<SwpBluetoothModel *> * _Nonnull models, NSArray<NSDictionary<NSString *,id> *> * _Nonnull datas){
+        __strong __typeof(weakSelf)strongSelf = weakSelf;
+        if (!strongSelf) return;
+        
+        strongSelf.peripheral =  perpheral;
+        
+        [strongSelf swpBluetoothListViewDataRefresh:datas];
+        [SVProgressHUD showInfoWithStatus:[NSString stringWithFormat:@"「 %@ 」「 连接成功 」", perpheral.name]];
+        
+    });
+    
+}
+
+
+/**
+ *  @author swp_song
+ *
+ *  @brief  swpBluetoothListViewDataRefresh:    ( 数据刷新 )
+ *
+ *  @param  datas   datas
+ */
+- (void)swpBluetoothListViewDataRefresh:(NSArray *)datas {
+    self.datas_ = [SwpBluetoothListModel swpBluetoothListWithDictionarys:datas];
+    self.swpBluetoothListView.datas(self.datas_);
+}
+
+
+#pragma mark - Init UI Methods
 - (SwpBluetoothListView *)swpBluetoothListView {
 
     return !_swpBluetoothListView ? _swpBluetoothListView = ({

@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 
+#import "AppDelegate+SVProgressHUD.h"
 #import "SwpBluetoothRootViewController.h"
 #import "SwpBluetoothNavigationController.h"
 
@@ -20,7 +21,10 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
     // Override point for customization after application launch.
+    
+    AppDelegate.setSVProgressHUD();
     
     self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
     
@@ -29,7 +33,6 @@
     
     self.window.rootViewController = [SwpBluetoothNavigationController swpBluetoothNavigationControllerWithRootViewController:SwpBluetoothRootViewController.new];
 
-    
     [self.window makeKeyAndVisible];
     
     return YES;
